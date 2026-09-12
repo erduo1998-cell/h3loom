@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "provider": "autodl",
+  "currency": "CNY",
+  "observed_at": "2026-08-25T00:00:00+08:00",
+  "valid_until": "2026-09-25T00:00:00+08:00",
+  "hourly_rate_cny": "5.98",
+  "source_reference": "RTX PRO 6000 16-prompt benchmark receipts approved 2026-08-25; reservations add headroom over the matching production route",
+  "profile_reserved_seconds": {
+    "fast": 480,
+    "precision_keyframes": 600
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "B-roll 四格故事板"
+  short_description: "先定故事板数量，再生成四格板并冻结 H3 生成脚本"
+  default_prompt: "Use $broll-storyboard-producer to decide the board count, generate strict four-panel Codex Imagine boards, and freeze each H3 generation script inside the approved manifest."

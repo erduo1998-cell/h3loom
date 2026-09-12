@@ -1,0 +1,4 @@
+interface:
+  display_name: "SRT B-roll 拆解"
+  short_description: "先锁视觉参考与场景，再规划 B-roll 节拍和摄影"
+  default_prompt: "Use $srt-broll-producer to lock both visual references, design concrete scenes, and then produce the B-roll coverage and semantic shot plan."

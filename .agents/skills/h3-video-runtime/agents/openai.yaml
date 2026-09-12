@@ -1,0 +1,4 @@
+interface:
+  display_name: "H3 云端执行"
+  short_description: "只读取 manifest 已批准提示词，在 AutoDL 生成与恢复"
+  default_prompt: "Use $h3-video-runtime to compile and run the approved images and manifest-frozen H3 prompts on AutoDL."

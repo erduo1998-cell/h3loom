@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "provider": "autodl",
+  "status": "live_production_attested",
+  "repository": "Comfy-Org/MiniMax-H3",
+  "revision": "d6cfb4e54cfb3b4e650edc5590bb1de10abba08e",
+  "license": {
+    "name": "minimax-h3-community-license-agreement",
+    "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/42ed227ee7df40d41602854ae760620d6eb651fe/LICENSE",
+    "sha256": "59b99642b95ea21630e311198ddbfffbfe05aadba0c2f5d884cbdf4efcc90f44",
+    "reviewed_at": "2026-09-12"
+  },
+  "mirror_base_url": "https://hf-mirror.com",
+  "total_bytes": 156450873596,
+  "files": [
+    {
+      "role": "shared_fl2va_int8_convrot",
+      "repository_path": "diffusion_models/minimax_h3_fl2va_int8_convrot.safetensors",
+      "comfy_subdir": "diffusion_models",
+      "bytes": 34038892334,
+      "sha256": "7ad4c73e6e378b822ffd1629f27f632d3787d95f5e468e3af958f98c58df96a5"
+    },
+    {
+      "role": "shared_ref2va_int8_convrot",
+      "repository_path": "diffusion_models/minimax_h3_ref2va_int8_convrot.safetensors",
+      "comfy_subdir": "diffusion_models",
+      "bytes": 34038894550,
+      "sha256": "9eef934046a0671bc8a5daf87100705e1478419c574cfde70c50fbe6885f76a9"
+    },
+    {
+      "role": "baseline_ref2v_turbo_4step",
+      "repository_path": "loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+      "comfy_subdir": "loras",
+      "bytes": 1956193000,
+      "sha256": "5b9ab5ade15d0775676d01a907268a69a1468dc6033b3b0d3ded5502f3ebb84c"
+    },
+    {
+      "role": "m2_fl2v_turbo_8step",
+      "repository_path": "loras/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "comfy_subdir": "loras",
+      "bytes": 1956193000,
+      "sha256": "2339acdf19bfe123f46b971ea35d367a84adb85de43627e1eceafa5a5b2b111e"
+    },
+    {
+      "role": "baseline_text_encoder_int8",
+      "repository_path": "text_encoders/qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+      "comfy_subdir": "text_encoders",
+      "bytes": 27141342152,
+      "sha256": "bc2ced0fbea64757fa9acddccfc0b3f4819d1dcf1da6c124d690d368be283923"
+    },
+    {
+      "role": "production_text_encoder_bf16",
+      "repository_path": "text_encoders/qwen3vl_32b_minimax_h3_bf16.safetensors",
+      "comfy_subdir": "text_encoders",
+      "bytes": 51506295256,
+      "sha256": "600d567f6a9629c8574e8e7041b199bdd9c59a986afa7906910a81919610607d"
+    },
+    {
+      "role": "audio_vae",
+      "repository_path": "vae/minimax_h3_audio_vae_fp32.safetensors",
+      "comfy_subdir": "vae",
+      "bytes": 605254808,
+      "sha256": "8e505d95dd1561d47abd43d4238fd40d9bb1ae9e147ed0a4cba778d76ae4db48"
+    },
+    {
+      "role": "video_vae",
+      "repository_path": "vae/minimax_h3_video_vae_fp16.safetensors",
+      "comfy_subdir": "vae",
+      "bytes": 5207808496,
+      "sha256": "7c1f131492e7eddacaac9069a61b81bdd39de5cc96561e677c5eab1cdce5e522"
+    }
+  ],
+  "optional_compatibility_models": [
+    {
+      "role": "fallback_text_encoder_nvfp4",
+      "repository_path": "text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "bytes": 15687142551,
+      "sha256": "35a88d51044231fe332301d7a62aa81e3f2cba62febeb446e2c1e3e0ef76f2c6",
+      "reason": "Documented fallback only; absent from the live-proven production stack."
+    }
+  ]
+}

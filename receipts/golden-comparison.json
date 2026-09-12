@@ -1,0 +1,13 @@
+{
+  "expected_model_bytes": 156450873596,
+  "extra_model_files": [],
+  "gpu_validation_deferred": true,
+  "inventory_sha256": "d2fa62e14f270c822510dc59cff59de8b8e100c2652c32784f2da03c5c30a460",
+  "live_expected_model_bytes": 156450873596,
+  "matches_known_golden_stack": true,
+  "missing_models": [],
+  "model_hashes_checked": true,
+  "model_mismatches": [],
+  "repository_mismatches": [],
+  "schema_version": "h3-stack-comparison-v1"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "provider": "autodl",
+  "fingerprint_version": "h3loom-cloud-stack-2026-09-12",
+  "fingerprint_sha256": "4836e31d2535525939609931a15885d954ed4d1a0840a707170fc03aadc4ae7b",
+  "expected": {
+    "comfyui_version": "0.33.1",
+    "required_frontend_version": "1.48.7",
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "minimum_vram_bytes": 100000000000
+  },
+  "golden_runtime_evidence_sha256": "1dd1e8715b3941b0d11d29a959bdace3420b81471a057288a446fb352af463c8",
+  "golden_runtime_evidence": {
+    "comfy_commit": "72865f4f27eaf5396f8f36370e0a2be3a9a090ee",
+    "kj_nodes_commit": "3f20054214fec9f9234fd3841ae6f1e4287948f6",
+    "rtx_nodes_commit": "892515e3eb9a4920a131a502a047e47adca9eb0d",
+    "torch_version": "2.11.0+cu130",
+    "sageattention_version": "1.0.6",
+    "model_receipt_sha256": "4957e13eab6ed941f301f995c4d805ad286688d22f637e20279a448dae421e78",
+    "recursive_patch_receipt_sha256": "11c1c4e34e3c46aa715ee1a4bf0fc62c1cce096fb707efcc5cb6e6d328f20f4a",
+    "h3_keyframes_source_commit": "9bce864b7df056a2822e4af593de17ef199ebcdc"
+  }
+}

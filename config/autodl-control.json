@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "provider": "autodl",
+  "power_on_attestation": {
+    "gpu_spec_uuid": "pro6000-p",
+    "snapshot_gpu_alias_name": "NVIDIA RTX PRO 6000",
+    "allowed_ssh_host_suffixes": ["seetacloud.com"]
+  }
+}

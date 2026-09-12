@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.example/schemas/visual-lock.schema.json",
+  "title": "B-roll visual authority locked before scene and camera planning",
+  "type": "object",
+  "required": ["schema_version", "task_id", "task_source_binding", "references", "decisions"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "task_id": {"type": "string", "minLength": 1},
+    "task_source_binding": {
+      "type": "object",
+      "required": ["annotations_applied", "input_sha256s_applied", "forbidden_applied", "existing_design_scope"],
+      "properties": {
+        "annotations_applied": {"type": "array", "items": {"type": "string"}},
+        "input_sha256s_applied": {"type": "array", "items": {"type": "string", "pattern": "^[a-f0-9]{64}$"}},
+        "forbidden_applied": {"type": "array", "items": {"type": "string"}},
+        "existing_design_scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "references": {
+      "type": "object",
+      "required": ["content_scene_style", "talking_head_transition"],
+      "properties": {
+        "content_scene_style": {"$ref": "#/$defs/referenceList"},
+        "talking_head_transition": {"$ref": "#/$defs/referenceList"}
+      }
+    },
+    "decisions": {
+      "type": "object",
+      "required": ["subject_language", "material_language", "space_language", "character_scale_proportion", "palette_exposure_lighting", "contrast_density", "camera_language", "variation_rule", "talking_head_transition", "forbidden_elements"],
+      "properties": {
+        "subject_language": {"type": "string", "minLength": 1},
+        "material_language": {"type": "string", "minLength": 1},
+        "space_language": {"type": "string", "minLength": 1},
+        "character_scale_proportion": {"type": "string", "minLength": 1},
+        "palette_exposure_lighting": {"type": "string", "minLength": 1},
+        "contrast_density": {"type": "string", "minLength": 1},
+        "camera_language": {"type": "string", "minLength": 1},
+        "variation_rule": {"type": "string", "minLength": 1},
+        "talking_head_transition": {"type": "string", "minLength": 1},
+        "forbidden_elements": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "$defs": {
+    "referenceList": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source", "sha256", "scope"],
+        "properties": {
+          "source": {"type": "string", "minLength": 1},
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "scope": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

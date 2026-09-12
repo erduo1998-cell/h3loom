@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.example/schemas/broll-shot-plan.schema.json",
+  "title": "Semantic B-roll shot plan",
+  "type": "object",
+  "required": ["schema_version", "task_id", "source_thesis", "audience_start", "logic_progression", "emotion_curve", "shots"],
+  "properties": {
+    "schema_version": {"enum": ["1.0", "2.0", "3.0"]},
+    "task_id": {"type": "string", "minLength": 1},
+    "source_thesis": {"type": "string", "minLength": 1},
+    "audience_start": {"type": "string", "minLength": 1},
+    "logic_progression": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "emotion_curve": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "source_duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "coverage_target_percent": {"type": "number", "exclusiveMinimum": 0, "maximum": 100},
+    "selected_broll_duration_seconds": {"type": "number", "minimum": 0},
+    "actual_coverage_percent": {"type": "number", "minimum": 0, "maximum": 100},
+    "rhetorical_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["member_id", "label", "role", "required", "covered_shot_ids"],
+        "properties": {
+          "member_id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"},
+          "label": {"type": "string", "minLength": 1},
+          "role": {"enum": ["chapter", "problem", "callback", "classification", "other"]},
+          "required": {"type": "boolean"},
+          "covered_shot_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["shot_id", "source_range", "source_quote", "visual_job", "scene_and_reason", "style_route", "beats", "transitions", "continuity_anchor", "necessary_text", "sound_intent", "generation_duration"],
+        "properties": {
+          "shot_id": {"type": "string", "minLength": 1},
+          "source_range": {"type": "string", "minLength": 1},
+          "source_start_seconds": {"type": "number", "minimum": 0},
+          "source_end_seconds": {"type": "number", "exclusiveMinimum": 0},
+          "source_quote": {"type": "string", "minLength": 1},
+          "visual_job": {"type": "string", "minLength": 1},
+          "scene_and_reason": {"type": "string", "minLength": 1},
+          "style_route": {"type": "string", "minLength": 1},
+          "text_strategy": {"enum": ["none", "keyword", "concept_ui", "exact_ai_text"]},
+          "sequence_mode": {"enum": ["multi_shot", "one_take"]},
+          "scene_design": {
+            "type": "object",
+            "required": ["subject", "setting", "visual_style_application", "talking_head_transition"],
+            "properties": {
+              "subject": {"type": "string", "minLength": 1},
+              "setting": {"type": "string", "minLength": 1},
+              "action_chain": {"type": "string", "minLength": 1},
+              "result_state": {"type": "string", "minLength": 1},
+              "visual_progress": {"type": "string", "minLength": 1},
+              "visual_style_application": {"type": "string", "minLength": 1},
+              "talking_head_transition": {"type": "string", "minLength": 1}
+            }
+          },
+          "beats": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "time": {"type": "string", "minLength": 1},
+                "start_seconds": {"type": "number", "minimum": 0},
+                "end_seconds": {"type": "number", "exclusiveMinimum": 0},
+                "spoken_addition": {"type": "string", "minLength": 1},
+                "start_state": {"type": "string", "minLength": 1},
+                "action": {"type": "string", "minLength": 1},
+                "end_state": {"type": "string", "minLength": 1},
+                "visual_content": {"type": "string", "minLength": 1},
+                "shot_number": {"type": "integer", "minimum": 1},
+                "framing": {"type": "string", "minLength": 1},
+                "camera": {"type": "string", "minLength": 1},
+                "shot_size": {"enum": ["extreme_wide", "wide", "full", "medium_wide", "medium", "medium_close", "close_up", "extreme_close_up", "insert"]},
+                "camera_angle": {"enum": ["eye_level", "high_angle", "low_angle", "overhead", "birds_eye", "ground_level", "dutch_angle"]},
+                "viewpoint": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"},
+                "transition_in": {"enum": ["start", "continue", "cut", "match_cut", "occlusion_cut"]}
+              }
+            }
+          },
+          "transitions": {"type": "array", "items": {"type": "string"}},
+          "continuity_anchor": {"type": "string"},
+          "necessary_text": {"type": "array", "items": {"type": "string"}},
+          "sound_intent": {"type": "string"},
+          "generation_duration": {"type": "integer", "minimum": 4, "maximum": 15}
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"text_strategy": {"type": "string"}}, "required": ["text_strategy"]},
+            "then": {
+              "required": ["source_start_seconds", "source_end_seconds", "text_strategy", "scene_design"],
+              "properties": {
+                "beats": {
+                  "items": {
+                    "required": ["time", "start_seconds", "end_seconds", "spoken_addition", "shot_number", "framing", "camera", "transition_in"]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": "2.0"}}, "required": ["schema_version"]},
+      "then": {
+        "required": ["source_duration_seconds", "coverage_target_percent", "selected_broll_duration_seconds", "actual_coverage_percent"],
+        "properties": {
+          "shots": {
+            "items": {
+              "required": ["source_start_seconds", "source_end_seconds", "text_strategy"],
+              "properties": {
+                "beats": {
+                  "items": {
+                    "required": ["time", "start_seconds", "end_seconds", "spoken_addition", "shot_number", "framing", "camera", "transition_in"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"schema_version": {"const": "3.0"}}, "required": ["schema_version"]},
+      "then": {
+        "required": ["source_duration_seconds", "coverage_target_percent", "selected_broll_duration_seconds", "actual_coverage_percent", "rhetorical_coverage"],
+        "properties": {
+          "shots": {
+            "items": {
+              "required": ["source_start_seconds", "source_end_seconds", "text_strategy", "scene_design", "sequence_mode"],
+              "properties": {
+                "scene_design": {
+                  "required": [
+                    "subject",
+                    "setting",
+                    "visual_progress",
+                    "visual_style_application",
+                    "talking_head_transition"
+                  ]
+                },
+                "beats": {
+                  "items": {
+                    "required": ["time", "start_seconds", "end_seconds", "spoken_addition", "visual_content", "shot_number", "framing", "camera", "shot_size", "camera_angle", "viewpoint", "transition_in"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

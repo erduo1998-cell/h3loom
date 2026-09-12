@@ -1,0 +1,241 @@
+{
+  "prompt": {
+    "127": {
+      "class_type": "UNETLoader",
+      "inputs": {
+        "unet_name": "minimax_h3_fl2va_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    "145": {
+      "class_type": "PathchSageAttentionKJ",
+      "inputs": {
+        "model": [
+          "127",
+          0
+        ],
+        "sage_attention": "auto",
+        "allow_compile": false
+      }
+    },
+    "128": {
+      "class_type": "CLIPLoader",
+      "inputs": {
+        "clip_name": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "type": "minimax",
+        "device": "default"
+      }
+    },
+    "119": {
+      "class_type": "VAELoader",
+      "inputs": {
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      }
+    },
+    "120": {
+      "class_type": "VAELoader",
+      "inputs": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      }
+    },
+    "137": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "AUTODL_BROLL_ref1.png"
+      }
+    },
+    "136": {
+      "class_type": "H3Keyframes",
+      "inputs": {
+        "clip": [
+          "128",
+          0
+        ],
+        "vae": [
+          "119",
+          0
+        ],
+        "prompt": "How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.75-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.25-second mark of the target video; Picture 5 (from Shot 4) aligns with the 15.08-second mark of the target video.\n\n[FL2VA keyframe storyboard generation]\n\nSUMMARY: One continuous 15-second miniature LEGO production-line sequence with four deliberately timed visual beats. Exactly one silent anonymous LEGO producer appears throughout, with identical black hair, beige torso, dark legs, scale, face style, and material. The environment keeps the same warm-orange main light, dark-brown wood and charcoal machinery, and cobalt-blue AI accents.\n\n[Shot 1, 0.00–3.75 seconds] The producer carries a script box from the planning table toward the camera station. A steady side-follow camera tracks the movement. Footsteps and paper-box movement form the soundscape.\n\n[Shot 2, 3.75–7.50 seconds] The script box crosses close to lens and reveals the same producer screening film at the rough-cut desk. A slow half-orbit keeps the producer and reel desk readable. Film-reel and desk mechanism sounds form the soundscape.\n\n[Shot 3, 7.50–11.25 seconds] A cobalt-blue indicator motivates the transition to the same producer checking the alerting workstations. A controlled lateral camera move follows the hand across the controls. Short electronic beeps and switch clicks form the soundscape.\n\n[Shot 4, 11.25–15.08 seconds] The camera rises into the overhead workstation corridor while the same producer supervises the path toward the render exit. Ventilation fan and conveyor mechanism sounds form the soundscape.\n\nCONTINUITY: The producer remains the same subject in every shot. Architecture, palette, material, object scale, spatial orientation, and lighting direction remain coherent. Each transition follows an existing foreground object, shared motion direction, or cobalt-blue indicator light. The producer works silently with a relaxed closed mouth. The scene contains exactly one worker.\n\nTEXT: Existing labels and numbers shown in the supplied keyframes remain attached to their original machines and floor positions. Their shapes stay static between their assigned keyframes. The producer's hair, face, torso, arms, and carried script box retain clean plain LEGO surfaces.\n\nDIALOGUE: N/A\nNON-DIEGETIC MUSIC: N/A\nAUDIO: synchronized footsteps, paper-box handling, film reels, mechanical switches, short electronic beeps, ventilation fan, and conveyor room tone.\n",
+        "width": 768,
+        "height": 576,
+        "length": 362,
+        "positions": "0%, 25%, 50%, 75%, 100%",
+        "image_1": [
+          "137",
+          0
+        ],
+        "image_2": [
+          "138",
+          0
+        ],
+        "image_3": [
+          "139",
+          0
+        ],
+        "image_4": [
+          "140",
+          0
+        ],
+        "image_5": [
+          "140",
+          0
+        ]
+      }
+    },
+    "126": {
+      "class_type": "BasicGuider",
+      "inputs": {
+        "model": [
+          "148",
+          0
+        ],
+        "conditioning": [
+          "136",
+          0
+        ]
+      }
+    },
+    "123": {
+      "class_type": "KSamplerSelect",
+      "inputs": {
+        "sampler_name": "euler"
+      }
+    },
+    "124": {
+      "class_type": "BasicScheduler",
+      "inputs": {
+        "model": [
+          "148",
+          0
+        ],
+        "scheduler": "simple",
+        "steps": 8,
+        "denoise": 1.0
+      }
+    },
+    "129": {
+      "class_type": "RandomNoise",
+      "inputs": {
+        "noise_seed": 420260826
+      }
+    },
+    "125": {
+      "class_type": "SamplerCustomAdvanced",
+      "inputs": {
+        "noise": [
+          "129",
+          0
+        ],
+        "guider": [
+          "126",
+          0
+        ],
+        "sampler": [
+          "123",
+          0
+        ],
+        "sigmas": [
+          "124",
+          0
+        ],
+        "latent_image": [
+          "136",
+          1
+        ]
+      }
+    },
+    "122": {
+      "class_type": "VAEDecode",
+      "inputs": {
+        "samples": [
+          "125",
+          0
+        ],
+        "vae": [
+          "119",
+          0
+        ]
+      }
+    },
+    "121": {
+      "class_type": "VAEDecodeAudio",
+      "inputs": {
+        "samples": [
+          "125",
+          0
+        ],
+        "vae": [
+          "120",
+          0
+        ]
+      }
+    },
+    "130": {
+      "class_type": "CreateVideo",
+      "inputs": {
+        "images": [
+          "122",
+          0
+        ],
+        "audio": [
+          "121",
+          0
+        ],
+        "fps": 24.0,
+        "bit_depth": 8
+      }
+    },
+    "92": {
+      "class_type": "SaveVideo",
+      "inputs": {
+        "video": [
+          "130",
+          0
+        ],
+        "filename_prefix": "video/AUTODL_H3_FL2V_TURBO8_KEYFRAMES_SAGE_15S",
+        "format": "auto",
+        "codec": "auto"
+      }
+    },
+    "138": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "AUTODL_B03B_ref2.png"
+      }
+    },
+    "139": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "AUTODL_B03B_ref3.png"
+      }
+    },
+    "140": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "AUTODL_B03B_ref4.png"
+      }
+    },
+    "147": {
+      "class_type": "LoraLoaderModelOnly",
+      "inputs": {
+        "model": [
+          "145",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      }
+    },
+    "148": {
+      "class_type": "MiniMaxH3SigmaShift",
+      "inputs": {
+        "model": [
+          "147",
+          0
+        ],
+        "shift_video": 12.0,
+        "shift_audio": 3.0
+      }
+    }
+  }
+}

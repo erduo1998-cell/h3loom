@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-09-12",
+  "source_kind": "active_production_worktree",
+  "files": [
+    {
+      "path": ".agents/skills/srt-broll-producer/SKILL.md",
+      "sha256": "e0ba1f0ad55de9edd96f45436c4e484bb3b2c5993b96f0ef130820254db44a42",
+      "treatment": "copied_current_production_bytes"
+    },
+    {
+      "path": ".agents/skills/srt-broll-producer/references/semantic-decomposition.md",
+      "sha256": "19dcb1c1c300d5af1cedc3b8f37f1ae507863214dc282053270e2665d42ba7fc",
+      "treatment": "copied_current_production_bytes"
+    },
+    {
+      "path": ".agents/skills/broll-storyboard-producer/SKILL.md",
+      "sha256": "7a1392d7f467ae608d32132d5557657efa0b61499d05e5a07012296a01b30dee",
+      "treatment": "copied_current_production_bytes"
+    },
+    {
+      "path": ".agents/skills/broll-storyboard-producer/references/four-panel-contract.md",
+      "sha256": "abe5ae0e6f3c6a51a2b69faac6c33d7f6cd87c914a2c918aca8fbf4b57597992",
+      "treatment": "copied_current_production_bytes"
+    },
+    {
+      "path": ".agents/skills/h3-video-runtime/SKILL.md",
+      "sha256": "999adf684bd9541b47caed9c88930b9cac620c96dff3a561887a149a69037083",
+      "treatment": "copied_current_production_bytes"
+    },
+    {
+      "path": ".agents/skills/h3-video-runtime/references/api-contract.md",
+      "sha256": "1adb892ed9e2e4b33953b309bb387a9b60b6319d2c9d00a4d76f4eca41136c96",
+      "treatment": "copied_current_production_bytes"
+    },
+    {
+      "path": ".agents/skills/h3-video-runtime/references/execution-recovery.md",
+      "sha256": "ed50bbeff5a6f5b10cafb84fed70cb01778a4dc409bba6042b28cef99f6f3879",
+      "treatment": "copied_current_production_bytes"
+    },
+    {
+      "path": "docs/three-stage-workflow.md",
+      "sha256": "4ff896f2623bf53f03b34d890d123d8a9e1fa11cbd9895cf19e68488e19d703f",
+      "treatment": "copied_current_production_bytes"
+    },
+    {
+      "path": "docs/autodl-production.md",
+      "sha256": "61ed2af3e5acb97c7c2cdea8ede9e54d617150f0b52000057123278b70dba897",
+      "treatment": "copied_current_production_bytes"
+    }
+  ]
+}

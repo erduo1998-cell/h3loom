@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "repository": "https://github.com/jlucasmcrell/ComfyUI-H3-Multishot.git",
+  "commit": "9bce864b7df056a2822e4af593de17ef199ebcdc",
+  "license": "MIT",
+  "scope": "Minimal H3Keyframes registration only; no other repository nodes or startup patches are installed.",
+  "files": {
+    "h3_keyframes.py": "5bd69ba55a2b243bbd5a1947d8822e135128ebeaf10a921f930cd33d15b62d3a",
+    "h3_interior_patch.py": "91fbafb062402c83c9536b4776adaa075ee3038b875ba89180460708ed3b9737",
+    "LICENSE": "cb072345070bdad3c577c28c0d83eff742524ae90c0d0721ebe614169c7378ec"
+  }
+}

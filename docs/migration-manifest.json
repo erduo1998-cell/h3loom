@@ -1,0 +1,475 @@
+{
+  "schema_version": "1.0",
+  "collected_at": "2026-09-07",
+  "baseline_repository_commit": "05aa9a2671d2319964b34ff1e2ecd10a17eea4b1",
+  "source_kind": "active_production_worktree_files_not_git_head",
+  "active_project_skills": [
+    "srt-broll-producer",
+    "broll-storyboard-producer",
+    "h3-video-runtime"
+  ],
+  "external_skill_dependencies": [
+    {
+      "name": "imagegen",
+      "provider": "Codex host",
+      "bundled": false,
+      "required_stage": 2
+    }
+  ],
+  "files": [
+    {
+      "source_relative_path": ".agents/skills/broll-storyboard-producer/SKILL.md",
+      "repository_path": ".agents/skills/broll-storyboard-producer/SKILL.md",
+      "source_sha256": "8014a670b5d2ebd3681b765df43aaebd08c67f903104f4aa685121f97bdf2edf",
+      "repository_sha256": "8b58edc8886191c68e170223a304b9243895e8b66604a1e8e9bff08aada6def3",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": ".agents/skills/broll-storyboard-producer/agents/openai.yaml",
+      "repository_path": ".agents/skills/broll-storyboard-producer/agents/openai.yaml",
+      "source_sha256": "60be74b1b89d524a3f156f7bd39bab315725b37402721b57e3aad0c2efc32cb4",
+      "repository_sha256": "60be74b1b89d524a3f156f7bd39bab315725b37402721b57e3aad0c2efc32cb4",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": ".agents/skills/broll-storyboard-producer/references/four-panel-contract.md",
+      "repository_path": ".agents/skills/broll-storyboard-producer/references/four-panel-contract.md",
+      "source_sha256": "18345a01fb41814f495212a0434af09554dfa73ff01a78b82dcafac6345c0094",
+      "repository_sha256": "18345a01fb41814f495212a0434af09554dfa73ff01a78b82dcafac6345c0094",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": ".agents/skills/h3-video-runtime/SKILL.md",
+      "repository_path": ".agents/skills/h3-video-runtime/SKILL.md",
+      "source_sha256": "af1771e94acff67ad60aeed6702d3a3a157070ffe2987eddfd70c80f54a1e7af",
+      "repository_sha256": "5baee14aee5630d118121456e9aad385cfe61cb089aa2cddcc6374740565c3ac",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": ".agents/skills/h3-video-runtime/agents/openai.yaml",
+      "repository_path": ".agents/skills/h3-video-runtime/agents/openai.yaml",
+      "source_sha256": "c91ce2c8d23058d27693eea083248b4ee93f2071199ff1db6e030988dbe30769",
+      "repository_sha256": "c91ce2c8d23058d27693eea083248b4ee93f2071199ff1db6e030988dbe30769",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": ".agents/skills/h3-video-runtime/references/api-contract.md",
+      "repository_path": ".agents/skills/h3-video-runtime/references/api-contract.md",
+      "source_sha256": "3d8cd15df8b3d81fe4c2d2fe51ad2eec61805faf2aeb06811e536cf788256356",
+      "repository_sha256": "7bac524ef44dcc5e1a5144da61e86c7e709afd52201cb9a6975871d90ebce878",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": ".agents/skills/h3-video-runtime/references/execution-recovery.md",
+      "repository_path": ".agents/skills/h3-video-runtime/references/execution-recovery.md",
+      "source_sha256": "936ad1461b5fc3f89a1f04d017217b2b0f4d69aaff1eb7243cdc4b50c3430a0f",
+      "repository_sha256": "3bf33de56ec1ad206441774d35eb0d24de85ae544a821c3ba56ba438a0c1a9a4",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": ".agents/skills/srt-broll-producer/SKILL.md",
+      "repository_path": ".agents/skills/srt-broll-producer/SKILL.md",
+      "source_sha256": "47bd8939b2cbf672e0ba6d0f6ee8b7d4f18c0140a0355314310f3eca92390b33",
+      "repository_sha256": "47bd8939b2cbf672e0ba6d0f6ee8b7d4f18c0140a0355314310f3eca92390b33",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": ".agents/skills/srt-broll-producer/agents/openai.yaml",
+      "repository_path": ".agents/skills/srt-broll-producer/agents/openai.yaml",
+      "source_sha256": "e921beeacad2b93c6d7d40b84859a57dcfccb455b51f1d6a36032dab95081742",
+      "repository_sha256": "e921beeacad2b93c6d7d40b84859a57dcfccb455b51f1d6a36032dab95081742",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": ".agents/skills/srt-broll-producer/references/semantic-decomposition.md",
+      "repository_path": ".agents/skills/srt-broll-producer/references/semantic-decomposition.md",
+      "source_sha256": "f58bbd0a9bd42282a75332d67d5cc965497effd1da2d236cb197f3f2dd45ade6",
+      "repository_sha256": "30b5b074f1b2b40833a8e818d6eceafa03e0eaefbd9c7ce3ff7b634a4ceed308",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": "AGENTS.md",
+      "repository_path": "AGENTS.md",
+      "source_sha256": "f9d5806886ed5383dc935ca0f84be57e846d541efd6cec5ac38ac340d525ff78",
+      "repository_sha256": "d89e8e73eec121cdcd674b1d61bb3bbfd6199585dace8968a475cfe80466113f",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": "README.md",
+      "repository_path": "README.md",
+      "source_sha256": "2ffb641b25edb1c0f9bcb378955fe959ff1ae2d3ce5a1638ca9804dad95a248c",
+      "repository_sha256": "fac58dbfc5eca497475423741e3a0a8299467fa180e37faf6765aa4c1556a608",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": "broll_video/__init__.py",
+      "repository_path": "broll_video/__init__.py",
+      "source_sha256": "53d3b218dd3010edfa6f58874b33ee9586f899b63cb461221a90acbe6627fc8d",
+      "repository_sha256": "53d3b218dd3010edfa6f58874b33ee9586f899b63cb461221a90acbe6627fc8d",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/__init__.py",
+      "repository_path": "broll_video/autodl/__init__.py",
+      "source_sha256": "5ee67b6fe8fa1d1b685350724ceb99ee1bf5e0b816c3c12c539d153800b490c7",
+      "repository_sha256": "5ee67b6fe8fa1d1b685350724ceb99ee1bf5e0b816c3c12c539d153800b490c7",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/canary.py",
+      "repository_path": "broll_video/autodl/canary.py",
+      "source_sha256": "887555f4d411defd43fa70efdd5f8b0c7cdc38be1b580049890fcb02955088b4",
+      "repository_sha256": "887555f4d411defd43fa70efdd5f8b0c7cdc38be1b580049890fcb02955088b4",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/cli.py",
+      "repository_path": "broll_video/autodl/cli.py",
+      "source_sha256": "bb5636d48424f957b1d904e3a2f05f9c7e355ca019dbca3889d8615f6d9423e4",
+      "repository_sha256": "bb5636d48424f957b1d904e3a2f05f9c7e355ca019dbca3889d8615f6d9423e4",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/comfy.py",
+      "repository_path": "broll_video/autodl/comfy.py",
+      "source_sha256": "5c7111e7174062695ed4722c5b1678a659fa26771d62b35d0e28c9988361b2d9",
+      "repository_sha256": "5c7111e7174062695ed4722c5b1678a659fa26771d62b35d0e28c9988361b2d9",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/control.py",
+      "repository_path": "broll_video/autodl/control.py",
+      "source_sha256": "10e08ea15e04f8d18865b922bd21df27f3ced7aeae446641fa8faa9a232545a6",
+      "repository_sha256": "10e08ea15e04f8d18865b922bd21df27f3ced7aeae446641fa8faa9a232545a6",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/credentials.py",
+      "repository_path": "broll_video/autodl/credentials.py",
+      "source_sha256": "ef3e09ea12575c1cfe8e795603287d4bfdcdfba46818ce98f5c36ddedbb69f8b",
+      "repository_sha256": "ef3e09ea12575c1cfe8e795603287d4bfdcdfba46818ce98f5c36ddedbb69f8b",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/graph.py",
+      "repository_path": "broll_video/autodl/graph.py",
+      "source_sha256": "cfa6ea993aa294d5043e041cbfeda8c56139af7d52ecbf202434b344aed01437",
+      "repository_sha256": "cfa6ea993aa294d5043e041cbfeda8c56139af7d52ecbf202434b344aed01437",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/pricing.py",
+      "repository_path": "broll_video/autodl/pricing.py",
+      "source_sha256": "b7398b33dcb607f4740c613efe1a873832ecd5d5d5e1526fa998d9760fc2226d",
+      "repository_sha256": "b7398b33dcb607f4740c613efe1a873832ecd5d5d5e1526fa998d9760fc2226d",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/readiness.py",
+      "repository_path": "broll_video/autodl/readiness.py",
+      "source_sha256": "588327cc7310bc7794624a2ccb6fc2dc4ca469b15b9c29fd9f1f189e749d76f9",
+      "repository_sha256": "588327cc7310bc7794624a2ccb6fc2dc4ca469b15b9c29fd9f1f189e749d76f9",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/runtime.py",
+      "repository_path": "broll_video/autodl/runtime.py",
+      "source_sha256": "b43d6533b6a99974638c208c191ca9a59d6ddd474b1518d32bf8941eb2b25545",
+      "repository_sha256": "b43d6533b6a99974638c208c191ca9a59d6ddd474b1518d32bf8941eb2b25545",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/service.py",
+      "repository_path": "broll_video/autodl/service.py",
+      "source_sha256": "b1f8253ca8f6aa3d9d3a189096baf7f1baeb13e0e51fce34a3c1b1b9fcd57c1b",
+      "repository_sha256": "b1f8253ca8f6aa3d9d3a189096baf7f1baeb13e0e51fce34a3c1b1b9fcd57c1b",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/ssh.py",
+      "repository_path": "broll_video/autodl/ssh.py",
+      "source_sha256": "e886bb6457246f34f447e98db150399fd0f483ff95c93d1ac6b2c59572dda720",
+      "repository_sha256": "e886bb6457246f34f447e98db150399fd0f483ff95c93d1ac6b2c59572dda720",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/workflow.py",
+      "repository_path": "broll_video/autodl/workflow.py",
+      "source_sha256": "717f22cf31012a6015f119c2d02d0d8e679ab57e1603ae9a46c2f071c24e2fae",
+      "repository_sha256": "717f22cf31012a6015f119c2d02d0d8e679ab57e1603ae9a46c2f071c24e2fae",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/workflows/keyframes-precision.json",
+      "repository_path": "broll_video/autodl/workflows/keyframes-precision.json",
+      "source_sha256": "fc103d51ea89d54896417d99be0c8cfeafe65e689908018082106d46b81dfd97",
+      "repository_sha256": "fc103d51ea89d54896417d99be0c8cfeafe65e689908018082106d46b81dfd97",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/workflows/ref2v-fast-rtx4k.json",
+      "repository_path": "broll_video/autodl/workflows/ref2v-fast-rtx4k.json",
+      "source_sha256": "a52ff8421b3cee04bdf1753042a848389ea370cd81c610f3dda7c35999f77395",
+      "repository_sha256": "a52ff8421b3cee04bdf1753042a848389ea370cd81c610f3dda7c35999f77395",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/autodl/workflows/ref2v-fast.json",
+      "repository_path": "broll_video/autodl/workflows/ref2v-fast.json",
+      "source_sha256": "da6d5467a8062ec243c2e6c54d37f69f020db4e3057163b304fff5da6a06db6f",
+      "repository_sha256": "da6d5467a8062ec243c2e6c54d37f69f020db4e3057163b304fff5da6a06db6f",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/cli.py",
+      "repository_path": "broll_video/cli.py",
+      "source_sha256": "c308d848b064d79032287dca05a45ffb50215edba94c143df5fb000beb0ef2a5",
+      "repository_sha256": "c308d848b064d79032287dca05a45ffb50215edba94c143df5fb000beb0ef2a5",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/gold_contract.py",
+      "repository_path": "broll_video/gold_contract.py",
+      "source_sha256": "af3fe3890c3d6de4ecc2cd654b8238f17bc35c381f8aedddf66d0eb1bbe3d69c",
+      "repository_sha256": "af3fe3890c3d6de4ecc2cd654b8238f17bc35c381f8aedddf66d0eb1bbe3d69c",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/h3/__init__.py",
+      "repository_path": "broll_video/h3/__init__.py",
+      "source_sha256": "c48ec3fc64b4365dc85e5df598169741c1b623ccd471b2e5722122803808232d",
+      "repository_sha256": "c48ec3fc64b4365dc85e5df598169741c1b623ccd471b2e5722122803808232d",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/h3/budget.py",
+      "repository_path": "broll_video/h3/budget.py",
+      "source_sha256": "041bf4d2780d9bd6ca048f09552622e2a2e9715adc49d0430348447919663d5c",
+      "repository_sha256": "041bf4d2780d9bd6ca048f09552622e2a2e9715adc49d0430348447919663d5c",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/h3/models.py",
+      "repository_path": "broll_video/h3/models.py",
+      "source_sha256": "83db89646880b80d97557fa3d7dcc5d081ab2afd846529895483af00efa5ac82",
+      "repository_sha256": "83db89646880b80d97557fa3d7dcc5d081ab2afd846529895483af00efa5ac82",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/h3/prompt_gate.py",
+      "repository_path": "broll_video/h3/prompt_gate.py",
+      "source_sha256": "31babf6ae61f06c5dc3963bb1a2b54843df3642ef238b7792bd6a1e66c24a167",
+      "repository_sha256": "31babf6ae61f06c5dc3963bb1a2b54843df3642ef238b7792bd6a1e66c24a167",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/h3/transport.py",
+      "repository_path": "broll_video/h3/transport.py",
+      "source_sha256": "da2e0f2db60bd4666dce4f22b894b931424e7839a7bff836f911d31890d0a66d",
+      "repository_sha256": "da2e0f2db60bd4666dce4f22b894b931424e7839a7bff836f911d31890d0a66d",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/producer.py",
+      "repository_path": "broll_video/producer.py",
+      "source_sha256": "b1093f7fbdaea147132782bfdc06b6c65600fddc1c511e9811ad9b452ae57079",
+      "repository_sha256": "b1093f7fbdaea147132782bfdc06b6c65600fddc1c511e9811ad9b452ae57079",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/requests.py",
+      "repository_path": "broll_video/requests.py",
+      "source_sha256": "1146ab74c75dd3928d49678d9dc75b95900a30a345b6d5020a3cf5aad3639c76",
+      "repository_sha256": "1146ab74c75dd3928d49678d9dc75b95900a30a345b6d5020a3cf5aad3639c76",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "broll_video/task.py",
+      "repository_path": "broll_video/task.py",
+      "source_sha256": "30022748ab44284034e3b8745f9cb249ce8b82338e14012f30808dcecea460de",
+      "repository_sha256": "30022748ab44284034e3b8745f9cb249ce8b82338e14012f30808dcecea460de",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "config/autodl-control.json",
+      "repository_path": "config/autodl-control.json",
+      "source_sha256": "fe0d26ddedb96b610f0f8447abb402b6f39a116ebb18f075caf62a6beac1b4eb",
+      "repository_sha256": "fe0d26ddedb96b610f0f8447abb402b6f39a116ebb18f075caf62a6beac1b4eb",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "config/autodl-pricing.json",
+      "repository_path": "config/autodl-pricing.json",
+      "source_sha256": "3799ca74217ab18729b32730b2e13c1b5cd065634db03c9509e92875027a2571",
+      "repository_sha256": "3799ca74217ab18729b32730b2e13c1b5cd065634db03c9509e92875027a2571",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "config/autodl-production-models.json",
+      "repository_path": "config/autodl-production-models.json",
+      "source_sha256": "78aec142801d3bf2e577515a1182dca67430a6e1ac82d52eb8dcdeb025bba62e",
+      "repository_sha256": "78aec142801d3bf2e577515a1182dca67430a6e1ac82d52eb8dcdeb025bba62e",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "config/autodl-stack-fingerprint.json",
+      "repository_path": "config/autodl-stack-fingerprint.json",
+      "source_sha256": "e012ec47c9c307a5e04bee29429330f92fe5803cf79857f33f1c2af431673d70",
+      "repository_sha256": "e012ec47c9c307a5e04bee29429330f92fe5803cf79857f33f1c2af431673d70",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "docs/autodl-production.md",
+      "repository_path": "docs/autodl-production.md",
+      "source_sha256": "484573e54f0eec04f7ba4ada78c503cb4e2fcfbea54bf9e571bd6c509e72c413",
+      "repository_sha256": "a708a823a190b28f61e750f84975501c54ccd391a3f287a6cd1b1fe045289c35",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": "docs/h3-stack-portability.md",
+      "repository_path": "docs/h3-stack-portability.md",
+      "source_sha256": "38fb7e80bdbc1c52ff79e65553e3eb4382868039f8a50060dbedcd754d4f1f32",
+      "repository_sha256": "41024766a712c246725453d0d2497ba533995b7f4d02a1f83c5fe314067ce313",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": "docs/three-stage-workflow.md",
+      "repository_path": "docs/three-stage-workflow.md",
+      "source_sha256": "84e9966f7632158896a59bdf9f8583cd24992f0ad07c4781bce71fc76249cbf2",
+      "repository_sha256": "de51549c1c012ed7141ea9ae9b215ac844826e61d9d3ffbbb63ac4c362518976",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": "pyproject.toml",
+      "repository_path": "pyproject.toml",
+      "source_sha256": "cebc597271238eacb7e4063277a061363be56e1262a9214e4454c954e5f83263",
+      "repository_sha256": "cebc597271238eacb7e4063277a061363be56e1262a9214e4454c954e5f83263",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "schemas/broll-shot-plan.schema.json",
+      "repository_path": "schemas/broll-shot-plan.schema.json",
+      "source_sha256": "b255a1f7f1b005c6aebdc6999b2e130afb32eb8bde481a4eb0ae70a7b9d5f9d7",
+      "repository_sha256": "b255a1f7f1b005c6aebdc6999b2e130afb32eb8bde481a4eb0ae70a7b9d5f9d7",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "schemas/broll-task.schema.json",
+      "repository_path": "schemas/broll-task.schema.json",
+      "source_sha256": "e819ebad874acc764a885b451c1305d30afe329d61af21da3e91383a23427706",
+      "repository_sha256": "e819ebad874acc764a885b451c1305d30afe329d61af21da3e91383a23427706",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "schemas/h3-request.schema.json",
+      "repository_path": "schemas/h3-request.schema.json",
+      "source_sha256": "0205c7031f275d8abaada6e6dc6cc6e5f58e9b877ab8eacaf79d323cdff5ad9c",
+      "repository_sha256": "0205c7031f275d8abaada6e6dc6cc6e5f58e9b877ab8eacaf79d323cdff5ad9c",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "schemas/storyboard-board-plan.schema.json",
+      "repository_path": "schemas/storyboard-board-plan.schema.json",
+      "source_sha256": "3b743fe4cfa9ca69e61a6254757ea6e05a9ab0d334150496e389a7464b2d2dd0",
+      "repository_sha256": "3b743fe4cfa9ca69e61a6254757ea6e05a9ab0d334150496e389a7464b2d2dd0",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "schemas/storyboard-manifest.schema.json",
+      "repository_path": "schemas/storyboard-manifest.schema.json",
+      "source_sha256": "bb82c061d73a516160df1d32a38e1bc46834ca4862abf4c0db50259ccb43c0f0",
+      "repository_sha256": "bb82c061d73a516160df1d32a38e1bc46834ca4862abf4c0db50259ccb43c0f0",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "schemas/visual-lock.schema.json",
+      "repository_path": "schemas/visual-lock.schema.json",
+      "source_sha256": "e00af6214d03d407f72b436113df4ffca13fd82368a2ef2debb8a481ca88b3df",
+      "repository_sha256": "e00af6214d03d407f72b436113df4ffca13fd82368a2ef2debb8a481ca88b3df",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "scripts/audit_autodl_h3_stack.py",
+      "repository_path": "scripts/audit_autodl_h3_stack.py",
+      "source_sha256": "020204c34f96260e5217fe3fb1656604d8f8003dbba7c31fdf25926435f0712c",
+      "repository_sha256": "4370daf1baa609739c35962803a4b42ad5e515c2a5d7f0a33318bab8da30b318",
+      "treatment": "adapted"
+    },
+    {
+      "source_relative_path": "tests_broll/__init__.py",
+      "repository_path": "tests_broll/__init__.py",
+      "source_sha256": "0ff19ad23f2af356b5b3a73104da7d49e9daab9a62dc61b5fb8a76bdc15c48f5",
+      "repository_sha256": "0ff19ad23f2af356b5b3a73104da7d49e9daab9a62dc61b5fb8a76bdc15c48f5",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "tests_broll/test_autodl_control.py",
+      "repository_path": "tests_broll/test_autodl_control.py",
+      "source_sha256": "b428b118f320f0b084eab0c335a5e84593cbd96f5d0645c2095345b248d3cc5e",
+      "repository_sha256": "b428b118f320f0b084eab0c335a5e84593cbd96f5d0645c2095345b248d3cc5e",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "tests_broll/test_autodl_runtime_extensions.py",
+      "repository_path": "tests_broll/test_autodl_runtime_extensions.py",
+      "source_sha256": "d09fdc25e7c1eed182029d5501b6126fcabb349efefb6d457fcc015fbb42715d",
+      "repository_sha256": "d09fdc25e7c1eed182029d5501b6126fcabb349efefb6d457fcc015fbb42715d",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "tests_broll/test_broll_flow.py",
+      "repository_path": "tests_broll/test_broll_flow.py",
+      "source_sha256": "cfdfaa608ea90499bfad52d2d628ae5987a5885ad42dc85dc33c4e08290fb025",
+      "repository_sha256": "cfdfaa608ea90499bfad52d2d628ae5987a5885ad42dc85dc33c4e08290fb025",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "tests_broll/test_deterministic_gates.py",
+      "repository_path": "tests_broll/test_deterministic_gates.py",
+      "source_sha256": "630cadc5ad1fdf16a99f4701a5d815502efc459d0b165c8e958bf708b67d65dd",
+      "repository_sha256": "630cadc5ad1fdf16a99f4701a5d815502efc459d0b165c8e958bf708b67d65dd",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "tests_broll/test_gold_contract.py",
+      "repository_path": "tests_broll/test_gold_contract.py",
+      "source_sha256": "4977a2377c8687991c4c58972e4966f30eb9d3f0c7dafe368e159bdbf4d3ada2",
+      "repository_sha256": "4977a2377c8687991c4c58972e4966f30eb9d3f0c7dafe368e159bdbf4d3ada2",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "tests_broll/test_h3_stack_portability.py",
+      "repository_path": "tests_broll/test_h3_stack_portability.py",
+      "source_sha256": "4afa57c1c7978b31f2e74524d77f6ec7b09c1a5aa10acff3183fa1408aecac45",
+      "repository_sha256": "4afa57c1c7978b31f2e74524d77f6ec7b09c1a5aa10acff3183fa1408aecac45",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "tests_broll/test_three_stage_hardening.py",
+      "repository_path": "tests_broll/test_three_stage_hardening.py",
+      "source_sha256": "67e43441489684165e4aad4e3d58cd5120150b4f3cd7aaf175255ad813e0c00c",
+      "repository_sha256": "67e43441489684165e4aad4e3d58cd5120150b4f3cd7aaf175255ad813e0c00c",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "uv.lock",
+      "repository_path": "uv.lock",
+      "source_sha256": "65efb2267389a947d790369263f5a7619c1b697a4e37fd7b2b730804cc61695c",
+      "repository_sha256": "65efb2267389a947d790369263f5a7619c1b697a4e37fd7b2b730804cc61695c",
+      "treatment": "unchanged"
+    },
+    {
+      "source_relative_path": "work/TASK_TEMPLATE.json",
+      "repository_path": "templates/TASK_TEMPLATE.json",
+      "source_sha256": "88d59a5226c4b1b038e673c6a8d540e5f2f43527ae5b047e7565405d6691c3b7",
+      "repository_sha256": "88d59a5226c4b1b038e673c6a8d540e5f2f43527ae5b047e7565405d6691c3b7",
+      "treatment": "unchanged"
+    }
+  ],
+  "notes": [
+    "Only relative provenance paths are recorded. Private credentials, media and task histories are excluded.",
+    "Deployment archive provenance is recorded separately in deploy/h3-easy-source.json.",
+    "New release documentation, synthetic examples and migration regression tests are repository additions, not copied production inputs."
+  ],
+  "target_snapshot_commit": "7964c6434f27a9b700ff4855dff2ee7bff97033f"
+}

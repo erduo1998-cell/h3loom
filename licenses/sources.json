@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-09-12",
+  "sources": [
+    {
+      "component": "ComfyUI",
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/72865f4f27eaf5396f8f36370e0a2be3a9a090ee/LICENSE",
+      "file": "licenses/ComfyUI.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "component": "KJNodes",
+      "url": "https://raw.githubusercontent.com/kijai/ComfyUI-KJNodes/3f20054214fec9f9234fd3841ae6f1e4287948f6/LICENSE",
+      "file": "licenses/KJNodes.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "component": "NVIDIA-RTX-Nodes",
+      "url": "https://raw.githubusercontent.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI/892515e3eb9a4920a131a502a047e47adca9eb0d/LICENSE",
+      "file": "licenses/NVIDIA-RTX-Nodes.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "component": "MiniMax H3",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/raw/42ed227ee7df40d41602854ae760620d6eb651fe/LICENSE",
+      "file": "licenses/MINIMAX-H3-LICENSE.txt",
+      "sha256": "59b99642b95ea21630e311198ddbfffbfe05aadba0c2f5d884cbdf4efcc90f44"
+    },
+    {
+      "component": "MiniMax H3 FAQ",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/raw/42ed227ee7df40d41602854ae760620d6eb651fe/docs/QA-about-License.md",
+      "file": "licenses/MINIMAX-H3-QA.md",
+      "sha256": "c39dcfc5dc3e546918509b57709db826a9b1945311bffaa01e80501101b8abe4"
+    }
+  ]
+}

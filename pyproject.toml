@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "h3loom"
+version = "0.2.0rc1"
+description = "H3Loom: SRT to storyboard to MiniMax H3 cloud B-roll"
+readme = "README.en.md"
+requires-python = ">=3.11"
+dependencies = [
+  "jsonschema>=4.20",
+  "Pillow>=10.0",
+]
+
+[project.scripts]
+broll-video = "broll_video.cli:main"
+broll-autodl = "broll_video.autodl.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["broll_video*"]
+
+[tool.setuptools.package-data]
+"broll_video.autodl" = ["workflows/*.json"]

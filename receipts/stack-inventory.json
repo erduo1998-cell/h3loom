@@ -1,0 +1,588 @@
+{
+  "collected_at": "2026-09-06T13:16:54Z",
+  "comfy_tracked_patch": "diff --git a/comfy_extras/nodes_audio.py b/comfy_extras/nodes_audio.py\nindex 1c6e91fe..af6d9eff 100644\n--- a/comfy_extras/nodes_audio.py\n+++ b/comfy_extras/nodes_audio.py\n@@ -361,7 +361,7 @@ class LoadAudio(IO.ComfyNode):\n     def define_schema(cls):\n         input_dir = folder_paths.get_input_directory()\n         os.makedirs(input_dir, exist_ok=True)\n-        files = folder_paths.filter_files_content_types(os.listdir(input_dir), [\"audio\", \"video\"])\n+        files = folder_paths.filter_files_content_types(folder_paths.recursive_search(input_dir)[0], [\"audio\", \"video\"])\n         return IO.Schema(\n             node_id=\"LoadAudio\",\n             search_aliases=[\"import audio\", \"open audio\", \"audio file\"],\ndiff --git a/comfy_extras/nodes_video.py b/comfy_extras/nodes_video.py\nindex 45394ce4..de01442f 100644\n--- a/comfy_extras/nodes_video.py\n+++ b/comfy_extras/nodes_video.py\n@@ -221,7 +221,7 @@ class LoadVideo(io.ComfyNode):\n     @classmethod\n     def define_schema(cls):\n         input_dir = folder_paths.get_input_directory()\n-        files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f))]\n+        files = folder_paths.recursive_search(input_dir)[0]\n         files = folder_paths.filter_files_content_types(files, [\"video\"])\n         return io.Schema(\n             node_id=\"LoadVideo\",\ndiff --git a/nodes.py b/nodes.py\nindex 1a3dd3f4..875769cf 100644\n--- a/nodes.py\n+++ b/nodes.py\n@@ -1738,7 +1738,7 @@ class LoadImage:\n     @classmethod\n     def INPUT_TYPES(s):\n         input_dir = folder_paths.get_input_directory()\n-        files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f))]\n+        files = folder_paths.recursive_search(input_dir)[0]\n         files = folder_paths.filter_files_content_types(files, [\"image\"])\n         return {\"required\":\n                     {\"image\": (sorted(files), {\"image_upload\": True})},",
+  "critical_files": [
+    {
+      "bytes": 1323,
+      "path": "incoming/launch-comfy.sh",
+      "sha256": "f9116562a89ea60afdd7378f8b2adaaa8f55eda0db25fd5f23b74c95e601778f"
+    },
+    {
+      "bytes": 10643,
+      "path": "incoming/install-stack.sh",
+      "sha256": "4ad62ea35b6d157af1de4dabfa0ef915f1ef1fafa2d830a22a2b1014999387ab"
+    },
+    {
+      "bytes": 582,
+      "path": "ComfyUI/custom_nodes/h3-keyframes-only/SOURCE.json",
+      "sha256": "42ceea155c4d26440011e2ab0720be3b562f420cf5c62d96876e9650cc2f6dd6"
+    }
+  ],
+  "git_repositories": [
+    {
+      "commit": "72865f4f27eaf5396f8f36370e0a2be3a9a090ee",
+      "describe": "v0.33.1-dirty",
+      "origin": "https://github.com/Comfy-Org/ComfyUI.git",
+      "path": "ComfyUI",
+      "tracked_change_count": 3,
+      "tracked_worktree_dirty": true
+    },
+    {
+      "commit": "3f20054214fec9f9234fd3841ae6f1e4287948f6",
+      "describe": "3f20054",
+      "origin": "https://github.com/kijai/ComfyUI-KJNodes.git",
+      "path": "ComfyUI/custom_nodes/ComfyUI-KJNodes",
+      "tracked_change_count": 0,
+      "tracked_worktree_dirty": false
+    },
+    {
+      "commit": "892515e3eb9a4920a131a502a047e47adca9eb0d",
+      "describe": "892515e",
+      "origin": "https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI.git",
+      "path": "ComfyUI/custom_nodes/Nvidia_RTX_Nodes_ComfyUI",
+      "tracked_change_count": 0,
+      "tracked_worktree_dirty": false
+    }
+  ],
+  "h3_keyframes_source_commit": "9bce864b7df056a2822e4af593de17ef199ebcdc",
+  "layout": {
+    "comfy_root": "/root/autodl-tmp/h3-stack/ComfyUI",
+    "stack_root": "/root/autodl-tmp/h3-stack"
+  },
+  "models": [
+    {
+      "bytes": 0,
+      "path": "audio_encoders/put_audio_encoder_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "background_removal/put_background_removal_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "checkpoints/put_checkpoints_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "clip/put_clip_or_text_encoder_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "clip_vision/put_clip_vision_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1933,
+      "path": "configs/anything_v3.yaml",
+      "sha256": "8d81ca32367c7b3a809e02c4259504aa8d77a2694b52e7b793f9695e6cc75107"
+    },
+    {
+      "bytes": 1873,
+      "path": "configs/v1-inference.yaml",
+      "sha256": "20b7f0acae54d1f88384a6ca15b5d62c0ee4fbbca07ff72f3761fe936083210d"
+    },
+    {
+      "bytes": 1933,
+      "path": "configs/v1-inference_clip_skip_2.yaml",
+      "sha256": "8d81ca32367c7b3a809e02c4259504aa8d77a2694b52e7b793f9695e6cc75107"
+    },
+    {
+      "bytes": 1956,
+      "path": "configs/v1-inference_clip_skip_2_fp16.yaml",
+      "sha256": "5de4cdd258908cac4d9d6d3250cdd9c6feb2f0ccff745e3e3195b25bd6a3af71"
+    },
+    {
+      "bytes": 1896,
+      "path": "configs/v1-inference_fp16.yaml",
+      "sha256": "25727b19592d3c5ab44299089bae95d6989e98a222228f4dc0ee5c6200188fc0"
+    },
+    {
+      "bytes": 1992,
+      "path": "configs/v1-inpainting-inference.yaml",
+      "sha256": "6a180ba807940815028e48e41cdd0fb3c10d0d2b2a32249c023b2d4c9bf45c5c"
+    },
+    {
+      "bytes": 1815,
+      "path": "configs/v2-inference-v.yaml",
+      "sha256": "72b092aadfe146f5d3f395a720c0aa3b2354b2095e3f10dc18f0e9716d286dcb"
+    },
+    {
+      "bytes": 1816,
+      "path": "configs/v2-inference-v_fp32.yaml",
+      "sha256": "6b8ed358d0197cc4f631199dd7107955a0e7772aa17a140c8422f08f60042df5"
+    },
+    {
+      "bytes": 1789,
+      "path": "configs/v2-inference.yaml",
+      "sha256": "ec4094bd36ef558cd9d52c9985471ac91d2c0c5bd071717411a4ccd5adf4f311"
+    },
+    {
+      "bytes": 1790,
+      "path": "configs/v2-inference_fp32.yaml",
+      "sha256": "54c86f69043e2dda671c89bce2e8aa59d535b01ffb436faf5597ca75c85ceaff"
+    },
+    {
+      "bytes": 4450,
+      "path": "configs/v2-inpainting-inference.yaml",
+      "sha256": "821a51ee6a8f3a62e7f2002557fcb4f4ae97a2ab3cb3fb85942897d536fa8b2c"
+    },
+    {
+      "bytes": 0,
+      "path": "controlnet/put_controlnets_and_t2i_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "detection/put_detection_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "diffusers/put_diffusers_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 34038892334,
+      "path": "diffusion_models/minimax_h3_fl2va_int8_convrot.safetensors",
+      "sha256": "7ad4c73e6e378b822ffd1629f27f632d3787d95f5e468e3af958f98c58df96a5"
+    },
+    {
+      "bytes": 34038894550,
+      "path": "diffusion_models/minimax_h3_ref2va_int8_convrot.safetensors",
+      "sha256": "9eef934046a0671bc8a5daf87100705e1478419c574cfde70c50fbe6885f76a9"
+    },
+    {
+      "bytes": 0,
+      "path": "diffusion_models/put_diffusion_model_files_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "embeddings/put_embeddings_or_textual_inversion_concepts_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "frame_interpolation/put_frame_interpolation_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "geometry_estimation/put_geometry_estimation_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "gligen/put_gligen_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "hypernetworks/put_hypernetworks_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "latent_upscale_models/put_latent_upscale_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1956193000,
+      "path": "loras/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "sha256": "2339acdf19bfe123f46b971ea35d367a84adb85de43627e1eceafa5a5b2b111e"
+    },
+    {
+      "bytes": 1956193000,
+      "path": "loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+      "sha256": "5b9ab5ade15d0775676d01a907268a69a1468dc6033b3b0d3ded5502f3ebb84c"
+    },
+    {
+      "bytes": 0,
+      "path": "loras/put_loras_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "model_patches/put_model_patches_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "optical_flow/put_optical_flow_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "photomaker/put_photomaker_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "style_models/put_t2i_style_model_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "text_encoders/put_text_encoder_files_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 51506295256,
+      "path": "text_encoders/qwen3vl_32b_minimax_h3_bf16.safetensors",
+      "sha256": "600d567f6a9629c8574e8e7041b199bdd9c59a986afa7906910a81919610607d"
+    },
+    {
+      "bytes": 27141342152,
+      "path": "text_encoders/qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+      "sha256": "bc2ced0fbea64757fa9acddccfc0b3f4819d1dcf1da6c124d690d368be283923"
+    },
+    {
+      "bytes": 0,
+      "path": "unet/put_unet_files_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "upscale_models/put_esrgan_and_other_upscale_models_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 605254808,
+      "path": "vae/minimax_h3_audio_vae_fp32.safetensors",
+      "sha256": "8e505d95dd1561d47abd43d4238fd40d9bb1ae9e147ed0a4cba778d76ae4db48"
+    },
+    {
+      "bytes": 5207808496,
+      "path": "vae/minimax_h3_video_vae_fp16.safetensors",
+      "sha256": "7c1f131492e7eddacaac9069a61b81bdd39de5cc96561e677c5eab1cdce5e522"
+    },
+    {
+      "bytes": 0,
+      "path": "vae/put_vae_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "vae_approx/put_taesd_encoder_pth_and_taesd_decoder_pth_here",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "non_git_custom_nodes": [
+    {
+      "bytes": 568282,
+      "file_count": 66,
+      "path": "ComfyUI/custom_nodes/ComfyUI-MiniMaxH3-Easy",
+      "sha256": "69c80b7b2f9f622ff7e2e91a5459d9eaac58509ca65967883ff5ad6ca3cee9b5"
+    },
+    {
+      "bytes": 25111,
+      "file_count": 5,
+      "path": "ComfyUI/custom_nodes/h3-keyframes-only",
+      "sha256": "8e81095c5707f4f13a157ec850e89dcb053d642656cba59ac556d8fc284c1218"
+    }
+  ],
+  "privacy_redaction": {
+    "comparison_note": "golden-comparison.json describes the original inventory identified by original_inventory_sha256; model hashes, versions and stack comparison facts are unchanged.",
+    "fields": [
+      "system.mount"
+    ],
+    "is_redacted_copy": true,
+    "original_inventory_sha256": "d2fa62e14f270c822510dc59cff59de8b8e100c2652c32784f2da03c5c30a460",
+    "reason": "Removed device source containing a cloud container storage identifier; retained filesystem type and mount target."
+  },
+  "probe_mode": "read_only_full_model_hash",
+  "python": {
+    "packages": [
+      "ImageIO==2.37.4",
+      "Jinja2==3.1.6",
+      "Mako==1.4.1",
+      "MarkupSafe==3.0.3",
+      "PyOpenGL==3.1.10",
+      "PyYAML==6.0.3",
+      "Pygments==2.21.0",
+      "SQLAlchemy==2.0.52",
+      "aiohappyeyeballs==2.7.1",
+      "aiohttp==3.14.3",
+      "aiosignal==1.4.0",
+      "alembic==1.19.1",
+      "annotated-doc==0.0.5",
+      "annotated-types==0.8.0",
+      "anyio==4.14.2",
+      "attrs==26.1.0",
+      "av==18.1.0",
+      "blake3==1.0.9",
+      "certifi==2026.7.22",
+      "charset-normalizer==3.5.1",
+      "click==8.4.2",
+      "color-matcher==0.6.0",
+      "comfy-aimdo==0.4.13",
+      "comfy-angle==0.1.1",
+      "comfy-kitchen==0.2.31",
+      "comfyui-embedded-docs==0.5.9",
+      "comfyui-workflow-templates-core==0.3.312",
+      "comfyui-workflow-templates-json==0.1.47",
+      "comfyui-workflow-templates-media-api==0.3.84",
+      "comfyui-workflow-templates-media-assets-01==0.1.28",
+      "comfyui-workflow-templates-media-image==0.3.160",
+      "comfyui-workflow-templates-media-other==0.3.229",
+      "comfyui-workflow-templates-media-video==0.3.101",
+      "comfyui_frontend_package==1.48.7",
+      "comfyui_workflow_templates==0.11.41",
+      "contourpy==1.3.3",
+      "cuda-bindings==13.3.1",
+      "cuda-pathfinder==1.6.0",
+      "cuda-toolkit==13.0.2",
+      "cycler==0.12.1",
+      "ddt==1.7.2",
+      "docutils==0.23",
+      "einops==0.8.2",
+      "filelock==3.32.3",
+      "fonttools==4.63.0",
+      "frozenlist==1.8.0",
+      "fsspec==2026.7.0",
+      "greenlet==3.5.5",
+      "h11==0.16.0",
+      "hf-xet==1.6.0",
+      "httpcore==1.0.9",
+      "httpx==0.28.1",
+      "huggingface_hub==1.28.0",
+      "idna==3.19",
+      "kiwisolver==1.5.0",
+      "kornia==0.8.3",
+      "kornia_rs==0.1.14",
+      "markdown-it-py==4.2.0",
+      "matplotlib==3.11.1",
+      "mdurl==0.1.2",
+      "mpmath==1.3.0",
+      "mss==10.2.0",
+      "multidict==6.7.1",
+      "networkx==3.6.1",
+      "numpy==2.5.2",
+      "nvidia-cublas==13.1.0.3",
+      "nvidia-cuda-cupti==13.0.85",
+      "nvidia-cuda-nvrtc==13.0.88",
+      "nvidia-cuda-runtime==13.0.96",
+      "nvidia-cudnn-cu13==9.19.0.56",
+      "nvidia-cufft==12.0.0.61",
+      "nvidia-cufile==1.15.1.6",
+      "nvidia-curand==10.4.0.35",
+      "nvidia-cusolver==12.0.4.66",
+      "nvidia-cusparse==12.6.3.3",
+      "nvidia-cusparselt-cu13==0.8.0",
+      "nvidia-nccl-cu13==2.28.9",
+      "nvidia-nvjitlink==13.0.88",
+      "nvidia-nvshmem-cu13==3.4.5",
+      "nvidia-nvtx==13.0.85",
+      "nvidia-vfx @ file:///root/autodl-tmp/h3-stack/incoming/nvidia_vfx-0.1.0.1-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl#sha256=e51d9e6faa68466e45b83be7928321af4b0c561c7c5536a8cb2b7e6aba25f905",
+      "opencv-python-headless==5.0.0.93",
+      "packaging==26.3",
+      "pillow==12.3.0",
+      "propcache==0.5.2",
+      "psutil==7.2.2",
+      "pydantic-settings==2.15.0",
+      "pydantic==2.13.4",
+      "pydantic_core==2.46.4",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "python-dotenv==1.2.3",
+      "regex==2026.7.19",
+      "requests==2.34.2",
+      "rich==15.0.0",
+      "safetensors==0.8.0",
+      "sageattention==1.0.6",
+      "scipy==1.18.1",
+      "sentencepiece==0.2.2",
+      "setuptools==78.1.0",
+      "shellingham==1.5.4",
+      "simpleeval==1.0.7",
+      "six==1.17.0",
+      "spandrel==0.4.2",
+      "sympy==1.14.0",
+      "tokenizers==0.22.2",
+      "torch==2.11.0+cu130",
+      "torchaudio==2.11.0+cu130",
+      "torchsde==0.2.6",
+      "torchvision==0.26.0+cu130",
+      "tqdm==4.70.0",
+      "trampoline==0.1.2",
+      "transformers==5.15.1",
+      "triton==3.6.0",
+      "typer==0.27.1",
+      "typing-inspection==0.4.4",
+      "typing_extensions==4.16.0",
+      "urllib3==2.7.0",
+      "wheel==0.48.0",
+      "yarl==1.24.5"
+    ],
+    "version": "Python 3.12.12"
+  },
+  "receipt_files": [
+    {
+      "bytes": 149,
+      "path": "receipts/condarc-after-autodl-channel-fix.txt",
+      "sha256": "5e8b294f476fbac67060ca13e7e488510356f6727fc4958dfb6672e9ef0b69fb"
+    },
+    {
+      "bytes": 243,
+      "path": "receipts/condarc-before-autodl-channel-fix.txt",
+      "sha256": "784090dc679e8d2bb595f45ef557635d87e9334d71ed0104af4682ee404857b3"
+    },
+    {
+      "bytes": 920,
+      "path": "receipts/h3-keyframes-live-acceptance.json",
+      "sha256": "7fc106b10bd9fd6d9d1cdc781cf50523ca2b862b03679f02f2a25d628ac2ec12"
+    },
+    {
+      "bytes": 3204,
+      "path": "receipts/install-20260824T184102Z.txt",
+      "sha256": "30d1a30310bac23376dee5eeda1f70d75d6f717b273389a4198e181b463a2745"
+    },
+    {
+      "bytes": 219,
+      "path": "receipts/install-script-operational-patch-20260824T182551Z.txt",
+      "sha256": "3f32fe42e8a5fda7ad96a1bbfecb2bb55420af73563a4cfd68efa71a30fad45f"
+    },
+    {
+      "bytes": 2666,
+      "path": "receipts/stack-probe-20260824T211324Z.json",
+      "sha256": "c7f88d0ae9a21781a44affa74d98d6265b734dd995fc2c1d90de64f8117b6e90"
+    },
+    {
+      "bytes": 2809,
+      "path": "receipts/stack-probe-20260824T212651Z.json",
+      "sha256": "d83cc171cd2f0db07135336ca63ebfe7b7cb4a3748364d91ee75d3fbd2574eeb"
+    },
+    {
+      "bytes": 2809,
+      "path": "receipts/stack-probe-20260825T041510Z.json",
+      "sha256": "731204c8193f3c7010389eb32c7189e225bacdf5367fac832663834b2dfdf24d"
+    },
+    {
+      "bytes": 1900,
+      "path": "receipts/final-runtime/comfy-recursive-media.patch",
+      "sha256": "11c1c4e34e3c46aa715ee1a4bf0fc62c1cce096fb707efcc5cb6e6d328f20f4a"
+    },
+    {
+      "bytes": 2717,
+      "path": "receipts/final-runtime/delivery-sha256.txt",
+      "sha256": "8ec2c03a2cd59ca1813603dbf64d88f6221ee228f17d69973fa2a89e2a92a1f0"
+    },
+    {
+      "bytes": 148,
+      "path": "receipts/final-runtime/runtime.txt",
+      "sha256": "be2adca12af34f9e523e477f174a0ee3fdfd54ea763573d005a0dff39ff322e9"
+    },
+    {
+      "bytes": 376,
+      "path": "receipts/final-runtime/sageattention.txt",
+      "sha256": "69f221b6ea1ae5fe3820a9accadfc256af5e9a74b605168698106b53621213c8"
+    },
+    {
+      "bytes": 4380,
+      "path": "receipts/models-parallel-20260824T185114Z/final.json",
+      "sha256": "b06393194cba22237529bc5b31d70dd307fd96817f5c863d972f1e13bdc70891"
+    },
+    {
+      "bytes": 822,
+      "path": "receipts/models-parallel-20260824T185114Z/items/baseline_ref2v_turbo_4step.json",
+      "sha256": "812e5ebe2b9e1e9dbbe42bc374253bac63c000e2663825cd144976e398a7d7b1"
+    },
+    {
+      "bytes": 816,
+      "path": "receipts/models-parallel-20260824T185114Z/items/m2_fl2v_turbo_8step.json",
+      "sha256": "1982961d8cbf6b0389cb8033b4b0497e1c7bc9c8371394a6f4f54a1594590e41"
+    },
+    {
+      "bytes": 804,
+      "path": "receipts/models-parallel-20260824T185114Z/items/shared_fl2va_int8_convrot.json",
+      "sha256": "3f9316d497e8387c9b0add460b34e4b1693847aab5ce984fb423922aecdbec9c"
+    },
+    {
+      "bytes": 809,
+      "path": "receipts/models-parallel-20260824T185114Z/items/shared_ref2va_int8_convrot.json",
+      "sha256": "6873359359011be98476d97bef39e31d0ba198999f6a9fcb8f11b4a9abcac280"
+    },
+    {
+      "bytes": 7040,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/final.json",
+      "sha256": "716bf28d9c3fdaf73a062a685ecdbe413411718c42adcf2d042a42ac1a8be2dc"
+    },
+    {
+      "bytes": 711,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/items/audio_vae.json",
+      "sha256": "ec65d847aceba5365d023e82618144a9a55c810617e4eb077d93c5853f92df0c"
+    },
+    {
+      "bytes": 815,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/items/baseline_ref2v_turbo_4step.json",
+      "sha256": "9312552ec37227e1979df741eb3a3c491a5df0a0543f701413840d6ba76b8c7a"
+    },
+    {
+      "bytes": 812,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/items/baseline_text_encoder_int8.json",
+      "sha256": "777a83f3c301cf97bc62125b78d612bb6237458ec86dd68fe00155fd336f4159"
+    },
+    {
+      "bytes": 811,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/items/m2_fl2v_turbo_8step.json",
+      "sha256": "25b65320748111c03daf2454b364b411f4525830769a94fb07b6bb2514481c25"
+    },
+    {
+      "bytes": 799,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/items/shared_fl2va_int8_convrot.json",
+      "sha256": "dd3a2eb9a18d4987838ee0d5e29f6e4d4073fe5135de79a99b532e481052178b"
+    },
+    {
+      "bytes": 804,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/items/shared_ref2va_int8_convrot.json",
+      "sha256": "8a842aade090b7571ca4af3df2101d58d158b8e97869d7e2b266c427eede66b1"
+    },
+    {
+      "bytes": 779,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/items/upgrade_text_encoder_bf16.json",
+      "sha256": "dc208c5ce7fb017dc76336cff18769f7b86b495b1db13b8b7aa32a754c1f41b7"
+    },
+    {
+      "bytes": 713,
+      "path": "receipts/models-parallel-benchmark-20260824T185749Z/items/video_vae.json",
+      "sha256": "cb816f1d87e0501617d31f1075eecf9efb7efcf76bccab680f1691a823091076"
+    }
+  ],
+  "schema_version": "h3-stack-inventory-v1",
+  "system": {
+    "architecture": "x86_64",
+    "gpu_available": false,
+    "gpu_query": null,
+    "kernel": "5.15.0-78-generic",
+    "mount": {
+      "fstype": "xfs",
+      "target": "/root/autodl-tmp"
+    },
+    "os": {
+      "ID": "ubuntu",
+      "PRETTY_NAME": "Ubuntu 22.04.5 LTS",
+      "VERSION_ID": "22.04"
+    },
+    "stack_disk_bytes": {
+      "free": 352225947648,
+      "total": 536870912000,
+      "used": 184644964352
+    }
+  },
+  "tree_receipts": {
+    "benchmark": {
+      "bytes": 1206581177,
+      "file_count": 167,
+      "sha256": "9821fa9716afe2dd2ac714f31d49e97b7d487dda6bf084724b6527706482f12b"
+    },
+    "incoming": {
+      "bytes": 597607256,
+      "file_count": 25,
+      "sha256": "780c316f7fd04b0cf37d5abeca997858762285a75a6989bc0f8cadf7b580c6ef"
+    }
+  }
+}

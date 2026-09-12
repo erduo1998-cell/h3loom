@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "repository": "https://github.com/nkxx188/ComfyUI-MiniMaxH3-Easy",
+  "commit": "33b6a795ea8f53354eb6b7854a731be49ef24a4e",
+  "license": "MIT",
+  "archive": "h3-easy-33b6a795ea8f53354eb6b7854a731be49ef24a4e.tar.gz",
+  "sha256": "c942f384488e486d3d2b2e86cd2494aa479ac87b6b9e11879ae54b7975ae1a7f",
+  "original_archive_sha256": "eb63181d42a517acdbd146d0efc263325965d759fa0a05bc2316d0a1f3c6b857",
+  "packaging_change": "Removed AppleDouble entries and archive owner/extended metadata; normalized container only. All regular payload file bytes unchanged.",
+  "removed_metadata_entries": 51,
+  "unchanged_regular_files": 33
+}

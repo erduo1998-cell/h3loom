@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "package": "nvidia-vfx",
+  "version": "0.1.0.1",
+  "filename": "nvidia_vfx-0.1.0.1-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+  "bytes": 597321055,
+  "sha256": "e51d9e6faa68466e45b83be7928321af4b0c561c7c5536a8cb2b7e6aba25f905",
+  "url": "https://pypi.nvidia.com/nvidia-vfx/nvidia_vfx-0.1.0.1-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+  "storage_policy": "download_on_deploy_and_verify; do not commit the wheel"
+}

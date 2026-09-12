@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "task_id": "",
+  "task_name": "",
+  "intent": "从完整口播 SRT 生成按时间码对齐、供人工审片的独立 B-roll 素材",
+  "source": {
+    "original_srt": "",
+    "copied_srt": "source.srt",
+    "sha256": "",
+    "annotations": [],
+    "inputs": [],
+    "forbidden": []
+  },
+  "spec": {
+    "ratio": "16:9",
+    "resolution": "4K",
+    "provider": "autodl",
+    "backend": "autodl-comfy-h3",
+    "storyboard_backend": "codex-imagine",
+    "audio": "STRICT SFX ONLY: synchronized visible action and environmental sounds; absolutely no music, dialogue, narration, voices, or off-screen sound",
+    "production_contract": "agent-know-gold-v1",
+    "workflow_contract": "three-stage-four-panel-v1",
+    "provider_profile": "precision_keyframes",
+    "audio_policy": "sfx_only",
+    "draws_per_shot": 2,
+    "h3_anchor_images_per_shot": {
+      "minimum": 3,
+      "maximum": 5
+    },
+    "h3_anchor_density_max_per_shot": 4.1,
+    "h3_prompt_max_characters": 1600,
+    "execution_order": "pipelined_single_generate_single_download",
+    "download_queue_capacity": 4,
+    "expected_width": 3840,
+    "expected_height": 2160
+  },
+  "inheritance_policy": {
+    "mode": "fresh_redesign",
+    "source_task_id": null
+  },
+  "variant_ledger": {
+    "approved_generate_set": [],
+    "assets": []
+  },
+  "shot_plan_approval": {
+    "status": "pending",
+    "approved_at": null,
+    "approved_by": null
+  },
+  "storyboard_sample_approval": {
+    "status": "pending",
+    "approved_at": null,
+    "approved_by": null
+  },
+  "storyboard_approval": {
+    "status": "pending",
+    "approved_at": null,
+    "approved_by": null
+  },
+  "execution": {
+    "mode": "estimate_only"
+  },
+  "budget": {
+    "currency": "CNY",
+    "hard_limit": 20.0,
+    "estimated": 0.0,
+    "spent": 0.0,
+    "committed": 0.0,
+    "price_source": null
+  },
+  "delivery": {
+    "status": "planned",
+    "human_review": "pending",
+    "accepted_at": null
+  },
+  "notes": []
+}

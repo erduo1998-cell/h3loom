@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.example/schemas/storyboard-manifest.schema.json",
+  "title": "Codex Imagine storyboard manifest",
+  "type": "object",
+  "required": ["schema_version", "task_id", "generator", "shots"],
+  "properties": {
+    "schema_version": {"enum": ["1.0", "2.0", "3.0"]},
+    "task_id": {"type": "string", "minLength": 1},
+    "generator": {"const": "codex-imagine"},
+    "h3_visual_guard": {"type": "string", "minLength": 40, "maxLength": 650},
+    "approved_reference_assets": {
+      "type": "array",
+      "description": "User-approved auxiliary video/audio references; never generation storyboards.",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256", "source", "rights_note", "approved_by", "allowed_shot_ids", "allowed_profiles", "role"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "source": {"type": "string", "minLength": 1},
+          "rights_note": {"type": "string", "minLength": 1},
+          "approved_by": {"const": "user"},
+          "allowed_shot_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "allowed_profiles": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "role": {"enum": ["reference_video", "reference_audio"]}
+        }
+      }
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["shot_id", "generation_images"],
+        "properties": {
+          "shot_id": {"type": "string", "minLength": 1},
+          "review_board": {"type": "string", "minLength": 1},
+          "boards": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "required": ["board_id", "raw_board", "review_board", "imagine_prompt", "panels"],
+              "properties": {
+                "board_id": {"type": "string", "minLength": 1},
+                "raw_board": {"type": "string", "minLength": 1},
+                "review_board": {"type": "string", "minLength": 1},
+                "imagine_prompt": {"type": "string", "minLength": 1},
+                "panels": {
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "object",
+                    "required": ["panel_number", "time", "start_seconds", "end_seconds", "spoken_addition", "shot_number", "framing", "camera", "transition_in", "continuity_anchor", "text_strategy"],
+                    "properties": {
+                      "panel_number": {"type": "integer", "minimum": 1, "maximum": 4},
+                      "time": {"type": "string", "minLength": 1},
+                      "start_seconds": {"type": "number", "minimum": 0},
+                      "end_seconds": {"type": "number", "exclusiveMinimum": 0},
+                      "spoken_addition": {"type": "string", "minLength": 1},
+                      "shot_number": {"type": "integer", "minimum": 1},
+                      "framing": {"type": "string", "minLength": 1},
+                      "camera": {"type": "string", "minLength": 1},
+                      "shot_size": {"enum": ["extreme_wide", "wide", "full", "medium_wide", "medium", "medium_close", "close_up", "extreme_close_up", "insert"]},
+                      "camera_angle": {"enum": ["eye_level", "high_angle", "low_angle", "overhead", "birds_eye", "ground_level", "dutch_angle"]},
+                      "viewpoint": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"},
+                      "transition_in": {"enum": ["start", "continue", "cut", "match_cut", "occlusion_cut"]},
+                      "action_result": {"type": "string", "minLength": 1},
+                      "visual_content": {"type": "string", "minLength": 1},
+                      "continuity_anchor": {"type": "string", "minLength": 1},
+                      "text_strategy": {"enum": ["none", "keyword", "concept_ui", "exact_ai_text"]},
+                      "required_text": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "generation_images": {"type": "array", "minItems": 3, "maxItems": 5, "items": {"type": "string", "minLength": 1}},
+          "generation_anchor_times_seconds": {"type": "array", "minItems": 3, "maxItems": 5, "items": {"type": "number", "minimum": 0}},
+          "h3_request_prompt": {"type": "string", "minLength": 1, "maxLength": 1600}
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": "2.0"}}, "required": ["schema_version"]},
+      "then": {
+        "properties": {
+          "shots": {
+            "items": {"required": ["shot_id", "boards", "generation_images", "generation_anchor_times_seconds", "h3_request_prompt"]}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"schema_version": {"const": "3.0"}}, "required": ["schema_version"]},
+      "then": {
+        "properties": {
+          "shots": {
+            "items": {
+              "required": ["shot_id", "boards", "generation_images", "generation_anchor_times_seconds", "h3_request_prompt"],
+              "properties": {
+                "boards": {
+                  "items": {
+                    "properties": {
+                      "panels": {
+                        "items": {
+                          "required": ["panel_number", "time", "start_seconds", "end_seconds", "spoken_addition", "shot_number", "framing", "camera", "shot_size", "camera_angle", "viewpoint", "transition_in", "visual_content", "continuity_anchor", "text_strategy", "required_text"]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

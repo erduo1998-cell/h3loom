@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-09-12",
+  "renderer": "Blender 5.2.1 LTS / EEVEE local ray tracing",
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "duration_seconds": 24,
+  "video_frames": 720,
+  "audio": "Original code synthesis; AAC stereo",
+  "model_generation_calls": 0,
+  "files": [
+    {
+      "path": "docs/media/h3loom-intro.mp4",
+      "bytes": 8147039,
+      "sha256": "cab94977f3193a0ebae47c4e44c931a1acdc4c01f4ba339ec853f2368baa7836"
+    },
+    {
+      "path": "docs/media/h3loom-intro-poster.png",
+      "bytes": 817588,
+      "sha256": "e1a70a45dff347ce20b33e4736ee39383cf59cb9a59f5f32cc66eb7c64db47e0"
+    },
+    {
+      "path": "media/intro/film.py",
+      "bytes": 18595,
+      "sha256": "0616312864a2b7cd1df15cc9b921022a2d36edf7733966c858a09075d7a7e03b"
+    },
+    {
+      "path": "media/intro/finish.cjs",
+      "bytes": 5002,
+      "sha256": "bf29586dfabba7f0c6b2c86b8dbba1640770f0e5e1119153e5c7f7ece1cf3882"
+    },
+    {
+      "path": "media/intro/render-film.cjs",
+      "bytes": 737,
+      "sha256": "5f51175c92a2c4aa253dd236b808157bfdd8905c22a0bd5c6a7dbeadb3542ba1"
+    },
+    {
+      "path": "media/intro/package-lock.json",
+      "bytes": 8378,
+      "sha256": "beab23d8ebe9019a60efe8f780094fca7a336fa066cf93b36d540890c1721a87"
+    }
+  ]
+}

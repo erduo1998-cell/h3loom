@@ -25,9 +25,9 @@
 
 ### 24 秒專案介紹 · 純程式碼製作
 
-![24 秒專案介紹 · 純程式碼製作](docs/media/h3loom-intro.webp)
+![24 秒專案介紹 · 純程式碼製作](docs/media/h3loom-intro.webp?v=d439220efed5)
 
-自動循環播放 · 無聲；[觀看有聲版 MP4](https://erduo1998-cell.github.io/h3loom/) · [查看製作原始碼](media/intro/README.md)
+自動循環播放 · 無聲；[觀看有聲版 MP4](https://erduo1998-cell.github.io/h3loom/) · [查看製作原始碼](media/intro-three/README.md)
 
 影片由本機三維程式碼、動畫與合成音效製作；銀色模組是雲端執行環境的概念表達，不是實體硬體或 H3 實際生成樣例。
 

@@ -1,75 +1,111 @@
 {
   "created_at": "2026-09-12",
-  "renderer": "Blender 5.2.1 LTS / EEVEE local ray tracing",
+  "version": "connected-transitions",
+  "renderer": "Three.js 0.186.0 / local Chrome 153 / Metal",
   "dimensions": [
     1920,
     1080
   ],
-  "fps": 30,
+  "fps": 60,
   "duration_seconds": 24,
-  "video_frames": 720,
-  "audio": "Original code synthesis; AAC stereo",
+  "video_frames": 1440,
+  "audio": "Original deterministic local oscillator/noise synthesis; AAC stereo",
   "model_generation_calls": 0,
   "files": [
     {
       "path": "docs/media/h3loom-intro.mp4",
-      "bytes": 3547400,
-      "sha256": "3971facf7868727e95284d2797ba32f1be8d727cae73055fcd626f91e3fa23f1"
+      "bytes": 5301316,
+      "sha256": "55a6ec07521aae1b5e291842f9a147f5652e43a88fa50925331f6273db1a5125"
     },
     {
       "path": "docs/media/h3loom-intro-poster.png",
-      "bytes": 817588,
-      "sha256": "e1a70a45dff347ce20b33e4736ee39383cf59cb9a59f5f32cc66eb7c64db47e0"
-    },
-    {
-      "path": "media/intro/film.py",
-      "bytes": 18595,
-      "sha256": "0616312864a2b7cd1df15cc9b921022a2d36edf7733966c858a09075d7a7e03b"
-    },
-    {
-      "path": "media/intro/finish.cjs",
-      "bytes": 5000,
-      "sha256": "939beded414a58bef69fa5bd56cf8ba6412204f6ae6702cda07ce9d74b2434bd"
-    },
-    {
-      "path": "media/intro/render-film.cjs",
-      "bytes": 737,
-      "sha256": "5f51175c92a2c4aa253dd236b808157bfdd8905c22a0bd5c6a7dbeadb3542ba1"
-    },
-    {
-      "path": "media/intro/package-lock.json",
-      "bytes": 8378,
-      "sha256": "beab23d8ebe9019a60efe8f780094fca7a336fa066cf93b36d540890c1721a87"
+      "bytes": 130402,
+      "sha256": "bff9e7201f0fe63b78cb5972e505439c145ebd30f7a2e3ef5eaab067920d1a8f"
     },
     {
       "path": "docs/media/h3loom-intro.webp",
-      "bytes": 4522904,
-      "sha256": "ac2f58a9805a4a56d5c1169e8c3838c92d3f38d6fea5e9d5135e00197a545c68"
+      "bytes": 3087098,
+      "sha256": "d439220efed575275f87eea04934522054e799891c85f9bcb34e649fb64befb0"
     },
     {
       "path": "media/intro/readme-animation.py",
       "bytes": 1989,
       "sha256": "be09a9c0204d0098520ea31e25be0754bdbc39df94a2b768321c90a03128f41f"
+    },
+    {
+      "path": "media/intro-three/audio.cjs",
+      "bytes": 3214,
+      "sha256": "2a748179c939ac5caaa9c998811831263ebbc22d1d81dafb0b974d7798a414ec"
+    },
+    {
+      "path": "media/intro-three/build.mjs",
+      "bytes": 1079,
+      "sha256": "11885be02b8f762c5affb1ab4ac18116cee73939f270b5727641360aa2282ec0"
+    },
+    {
+      "path": "media/intro-three/index.html",
+      "bytes": 3233,
+      "sha256": "1ace3c0708274018cd81c716b33536f7e4cf6890a03d08d16f0a2fcc77e345ec"
+    },
+    {
+      "path": "media/intro-three/motion-score.js",
+      "bytes": 2881,
+      "sha256": "a77aa9dd6a71711a4b84625150c92fdec0acedc3ac0d2f66451c9a17ce0635bf"
+    },
+    {
+      "path": "media/intro-three/package-lock.json",
+      "bytes": 2208,
+      "sha256": "5847ab6384410edd0229a5ee47b8e26758064c6ec274dd156029768924ac12e2"
+    },
+    {
+      "path": "media/intro-three/package.json",
+      "bytes": 495,
+      "sha256": "ffb7f8076b6cd95c04a3c7fc4b6a06e9f37f93721e284edc935c39f495129860"
+    },
+    {
+      "path": "media/intro-three/render.mjs",
+      "bytes": 7600,
+      "sha256": "0b3f95e56e7276dec40b64d102806a419002bf052381e2bb991ab891ba5c6c26"
+    },
+    {
+      "path": "media/intro-three/scene.js",
+      "bytes": 19182,
+      "sha256": "6381f914db71505c790de2f82788ed4082c2b4b795d36876133f39939aa7bcc9"
+    },
+    {
+      "path": "media/intro-three/serve.mjs",
+      "bytes": 3010,
+      "sha256": "c4728a77646409aa04ac2c938d85e20f0d4bfee6dd376d7099f88155fd0fe19d"
+    },
+    {
+      "path": "media/intro-three/type-kit.js",
+      "bytes": 10617,
+      "sha256": "ef040fa928b2bba2ce81feec7986f135c6d0edade28a4f43b6afb49b81907cc6"
+    },
+    {
+      "path": "media/intro-three/verify.mjs",
+      "bytes": 7445,
+      "sha256": "2d7e714733c8ca52cdd6628990fcbc5338cb0b2c5c4257edd4266c79bb7f88ed"
+    },
+    {
+      "path": "media/intro-three/watch.html",
+      "bytes": 2396,
+      "sha256": "8b226a75b064a317dcbe3852c7992852038bf28c127633fd58002decd7ae1126"
     }
   ],
   "encoding": {
     "video": "H.264 / libx264",
-    "preset": "slow",
-    "crf": 24,
-    "audio_bitrate": "128k",
+    "preset": "fast",
+    "crf": 18,
+    "audio_bitrate": "160k",
     "fast_start": true,
-    "source": "Original rendered PNG frames + original Canvas overlays + synthesized PCM audio; not a transcode of the prior MP4"
+    "source": "Local Three.js deterministic frame render and original synthesized PCM audio; approved MP4 copied without re-encoding"
   },
-  "compression_review": {
-    "previous_bytes": 8147039,
-    "current_bytes": 3547400,
-    "reduction_percent": 56.5,
-    "reference_sha256": "cab94977f3193a0ebae47c4e44c931a1acdc4c01f4ba339ec853f2368baa7836",
-    "vmaf_mean_vs_previous": 96.85758,
-    "vmaf_min_vs_previous": 92.844613,
-    "decoded_video_frames": 720,
-    "complete_decode": "passed",
-    "note": "VMAF is a compression comparison, not a claim of losslessness or creative quality."
+  "verification": {
+    "complete_audio_video_decode": "passed",
+    "deterministic_seek_return_comparisons": 80,
+    "distinct_seek_times": 16,
+    "note": "Technical checks do not establish aesthetic equivalence to the reference."
   },
   "readme_preview": {
     "format": "animated WebP",
@@ -77,13 +113,19 @@
       800,
       450
     ],
-    "fps": 24,
+    "sampling_fps": 24,
     "duration_ms": 24000,
     "loop": 0,
     "audio": false,
     "quality": 76,
     "source": "docs/media/h3loom-intro.mp4",
     "encoder": "Pillow / libwebp, method 4",
-    "input_frames": 576
+    "input_frames": 576,
+    "encoded_frames": 445,
+    "note": "Identical held frames are merged while preserving duration."
+  },
+  "poster": {
+    "source": "docs/media/h3loom-intro.mp4",
+    "time_seconds": 21
   }
 }

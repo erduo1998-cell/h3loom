@@ -18,3 +18,8 @@ and remaining limitations in the pull request.
 Keep changes focused. Do not commit generated outputs, credentials, weights, or
 private source material. Do not silently change the default number of draws,
 budget, approval gates, or recovery semantics.
+
+Original code, Skills, and documentation text use [Apache-2.0](LICENSE).
+Contributions submitted for inclusion follow that license unless explicitly
+stated otherwise. Preserve third-party license notices; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

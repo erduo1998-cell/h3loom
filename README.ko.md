@@ -9,7 +9,8 @@
 [![Python](docs/images/badges/python.svg)](pyproject.toml)
 [![Agent Skills](docs/images/badges/skills.svg)](.agents/skills/srt-broll-producer/SKILL.md)
 [![Runtime](docs/images/badges/runtime.svg)](docs/autodl-production.md)
-[![Status](docs/images/badges/status.svg)](THIRD_PARTY_NOTICES.md)
+[![Status](docs/images/badges/status.svg)](https://github.com/erduo1998-cell/h3loom/releases/tag/v0.2.0rc1)
+[![License: Apache-2.0](docs/images/badges/license.svg)](LICENSE)
 
 **직접 운영하는 클라우드 · 지속적인 생성 실험 · 나만의 영상 스타일**
 
@@ -19,7 +20,7 @@
 
 **AI 영상을 꾸준히 제작하며 실전을 통해 스타일을 다듬고 싶은 크리에이터를 위한 프로젝트입니다.** 현재 주 작업 흐름은 말하는 영상의 SRT 자막을 독립적인 4K B-roll 소재로 바꾸는 것입니다. Agent가 샷 설계, 스토리보드 제작, 클라우드 실행을 맡습니다.
 
-> H3Loom은 독립적인 MiniMax H3 클라우드 제작 도구입니다. 현재는 로컬 출시 후보이며 미공개입니다. 자체 콘텐츠의 라이선스는 소유자가 정할 예정입니다. 모델 이용약관에는 지역 및 상업적 이용 조건이 있으며 대한민국은 허용 지역에서 제외됩니다. 한국어 문서는 한국 내 이용 허가를 의미하지 않습니다. [외부 라이선스](THIRD_PARTY_NOTICES.md)를 확인하세요.
+> H3Loom은 독립적인 MiniMax H3 클라우드 제작 도구입니다. 첫 공개 버전은 **v0.2.0rc1**이며, 자체 코드와 세 Skill은 [Apache-2.0](LICENSE)을 따릅니다. 모델에는 별도의 지역 및 상업적 이용 조건이 있으며 대한민국은 허용 지역에서 제외됩니다. 한국어 문서는 한국 내 이용 허가를 의미하지 않습니다. [외부 라이선스](THIRD_PARTY_NOTICES.md)를 확인하세요. 새 GPU 설치와 전체 영상 생성 과정은 실기기 검증이 남아 있습니다. [출시 검증](docs/release-readiness.md)을 참고하세요.
 
 
 ### 24초 프로젝트 소개 · 코드로 제작
@@ -89,8 +90,7 @@
 저장소 접근 권한을 받은 뒤, 로컬 컴퓨터에서 복제하고 설치합니다.
 
 ```bash
-# PUBLIC_REPOSITORY_URL: use the final repository URL after publication.
-git clone <PUBLIC_REPOSITORY_URL> h3loom
+git clone https://github.com/erduo1998-cell/h3loom.git h3loom
 cd h3loom
 uv sync --frozen
 source .venv/bin/activate
@@ -125,4 +125,4 @@ broll-video next <task-id>
 
 [설치 및 운영 안내서](docs/getting-started.md) · [제작 흐름](docs/three-stage-workflow.md) · [이전 범위](docs/migration-scope.md) · [완료한 검증](docs/migration-validation.md) · [외부 자료 출처 및 라이선스 상태](THIRD_PARTY_NOTICES.md)
 
-현재는 공개 출시 전이며, 자체 콘텐츠의 배포 라이선스도 정하지 않았습니다. 실제 영상의 화면, 글자, 소리는 사람이 확인해야 합니다. 소개 이미지와 개인 WeChat QR 코드의 출처 및 게재 목적은 [README 자료 기록](docs/readme-assets.md)을 참고하세요.
+실제 영상의 화면, 글자, 소리는 사람이 확인해야 합니다. 소개 이미지와 개인 WeChat QR 코드의 출처 및 게재 목적은 [README 자료 기록](docs/readme-assets.md)을 참고하세요.

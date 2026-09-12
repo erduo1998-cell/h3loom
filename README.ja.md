@@ -9,7 +9,8 @@
 [![Python](docs/images/badges/python.svg)](pyproject.toml)
 [![Agent Skills](docs/images/badges/skills.svg)](.agents/skills/srt-broll-producer/SKILL.md)
 [![Runtime](docs/images/badges/runtime.svg)](docs/autodl-production.md)
-[![Status](docs/images/badges/status.svg)](THIRD_PARTY_NOTICES.md)
+[![Status](docs/images/badges/status.svg)](https://github.com/erduo1998-cell/h3loom/releases/tag/v0.2.0rc1)
+[![License: Apache-2.0](docs/images/badges/license.svg)](LICENSE)
 
 **自分のクラウド環境 · 継続的な生成実験 · 自分だけの映像スタイル**
 
@@ -19,7 +20,7 @@
 
 **AI 動画を継続的に制作し、実践を通じてスタイルを磨きたいクリエイター向けです。** 現在の主なワークフローは、トーク動画の SRT 字幕を独立した 4K B-roll 素材に変換するものです。Agent がショット設計、ストーリーボード、クラウドでの実行を担当します。
 
-> H3Loom は独立した MiniMax H3 クラウド制作ツールです。現在はローカルのリリース候補で、未公開です。独自コンテンツのライセンスは所有者が決定する予定です。モデルには地域・商用利用の条件があります。[第三者ライセンス](THIRD_PARTY_NOTICES.md)をご確認ください。
+> H3Loom は独立した MiniMax H3 クラウド制作ツールです。最初の公開版は **v0.2.0rc1**。独自コードと 3 つの Skill は [Apache-2.0](LICENSE) で公開します。モデルには別途、地域・商用利用の条件があります。[第三者ライセンス](THIRD_PARTY_NOTICES.md)をご確認ください。新規 GPU へのインストールと動画生成の一連の動作は実機検証が必要です。[リリース検証](docs/release-readiness.md)をご覧ください。
 
 
 ### 24 秒の紹介動画 · コードで制作
@@ -89,8 +90,7 @@
 リポジトリへのアクセス権を取得したら、手元のパソコンでクローンしてインストールします。
 
 ```bash
-# PUBLIC_REPOSITORY_URL: use the final repository URL after publication.
-git clone <PUBLIC_REPOSITORY_URL> h3loom
+git clone https://github.com/erduo1998-cell/h3loom.git h3loom
 cd h3loom
 uv sync --frozen
 source .venv/bin/activate
@@ -125,4 +125,4 @@ broll-video next <task-id>
 
 [インストール・運用ガイド](docs/getting-started.md) · [制作フロー](docs/three-stage-workflow.md) · [移行範囲](docs/migration-scope.md) · [実施済みの検証](docs/migration-validation.md) · [第三者の提供元とライセンス状況](THIRD_PARTY_NOTICES.md)
 
-現在は一般公開されておらず、独自コンテンツの配布ライセンスも未定です。実際の動画は、映像、文字、音声を人が確認する必要があります。紹介画像と個人 WeChat QR コードの出典・掲載目的は、[README 素材記録](docs/readme-assets.md)をご覧ください。
+実際の動画は、映像、文字、音声を人が確認する必要があります。紹介画像と個人 WeChat QR コードの出典・掲載目的は、[README 素材記録](docs/readme-assets.md)をご覧ください。

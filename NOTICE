@@ -1,0 +1,10 @@
+H3Loom
+Copyright 2026 erduo1998-cell (刘冉 / 耳总)
+
+Original code, the three Agent Skills, and documentation text are licensed
+under the Apache License, Version 2.0. See LICENSE.
+
+Third-party materials retain their own licenses and notices as documented
+in THIRD_PARTY_NOTICES.md. Model weights and NVIDIA VFX binaries are not
+distributed by this repository. Personal identity and contact images are
+excluded from the Apache-2.0 grant; see docs/readme-assets.md.

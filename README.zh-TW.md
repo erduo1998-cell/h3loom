@@ -9,7 +9,8 @@
 [![Python](docs/images/badges/python.svg)](pyproject.toml)
 [![Agent Skills](docs/images/badges/skills.svg)](.agents/skills/srt-broll-producer/SKILL.md)
 [![Runtime](docs/images/badges/runtime.svg)](docs/autodl-production.md)
-[![Status](docs/images/badges/status.svg)](THIRD_PARTY_NOTICES.md)
+[![Status](docs/images/badges/status.svg)](https://github.com/erduo1998-cell/h3loom/releases/tag/v0.2.0rc1)
+[![License: Apache-2.0](docs/images/badges/license.svg)](LICENSE)
 
 **自有雲端部署 · 持續生成試驗 · 累積個人風格**
 
@@ -19,7 +20,7 @@
 
 **適合希望長期製作 AI 影片、願意透過實作磨練風格的創作者。** 目前主要流程會將口播 SRT 轉為獨立的 4K B-roll 影片素材，由 Agent 負責鏡頭設計、故事板和雲端執行。
 
-> H3Loom 是獨立的 MiniMax H3 雲端創作工具，名稱取 H3 + Loom（織機）。目前是本機發行候選，尚未公開；自有內容授權條款待所有者確定。模型另有地區與商業使用條件，見 [第三方授權](THIRD_PARTY_NOTICES.md)。
+> H3Loom 是獨立的 MiniMax H3 雲端創作工具，名稱取 H3 + Loom（織機）。首個公開版本為 **v0.2.0rc1**；自有程式碼與三個 Skill 採用 [Apache-2.0](LICENSE)。模型另有地區與商業使用條件，見 [第三方授權](THIRD_PARTY_NOTICES.md)。新 GPU 從零部署與端到端生成仍待實機驗收，詳見 [發行核驗](docs/release-readiness.md)。
 
 
 ### 24 秒專案介紹 · 純程式碼製作
@@ -89,8 +90,7 @@
 取得儲存庫存取權限後，在本機複製並安裝：
 
 ```bash
-# PUBLIC_REPOSITORY_URL: use the final repository URL after publication.
-git clone <PUBLIC_REPOSITORY_URL> h3loom
+git clone https://github.com/erduo1998-cell/h3loom.git h3loom
 cd h3loom
 uv sync --frozen
 source .venv/bin/activate
@@ -125,4 +125,4 @@ broll-video next <task-id>
 
 [安裝與執行手冊](docs/getting-started.md) · [製作流程](docs/three-stage-workflow.md) · [遷移範圍](docs/migration-scope.md) · [既有驗證](docs/migration-validation.md) · [第三方來源與授權狀態](THIRD_PARTY_NOTICES.md)
 
-目前尚未公開發布，也未選定自有內容的發行授權。實際影片仍需人工檢查畫面、文字和聲音。介紹圖與個人微信 QR Code 的來源及展示用途見 [README 素材記錄](docs/readme-assets.md)。
+實際影片仍需人工檢查畫面、文字和聲音。介紹圖與個人微信 QR Code 的來源及展示用途見 [README 素材記錄](docs/readme-assets.md)。

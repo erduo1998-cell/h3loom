@@ -6,7 +6,7 @@
 
 从完整口播 SRT 出发，由 Agent 设计镜头、生成四格故事板，再通过 AutoDL 上的 MiniMax H3 生成独立 4K B-roll 素材。本仓库包含三个自研 Skill、运行代码、配置、数据结构、测试和云端部署材料。
 
-**当前为私有整理版，尚未公开发布，也未选定自有代码和 Skill 的发行许可。** 模型、NVIDIA wheel、密码、用户素材与生成结果不进入仓库。
+**首个公开版本为 v0.2.0rc1，自有代码与三个 Skill 采用 [Apache-2.0](../LICENSE)。新 GPU 从零部署及完整生成尚待实机验收。** 模型、NVIDIA wheel、密码、用户素材与生成结果不进入仓库。
 
 ## 三个阶段
 
@@ -24,10 +24,10 @@
 
 需要 Python 3.11+、FFmpeg/FFprobe、OpenSSH（`ssh`、`scp`、`ssh-keyscan`、`ssh-keygen`）；密码 SSH 另需 `sshpass`。本机不需要 NVIDIA GPU。云端要求见下文。
 
-本地发行候选尚未公开。正式发布后，将下方占位符替换为发布仓库 URL；本地候选目录可直接执行安装命令：
+克隆公开仓库，并在仓库根目录安装锁定依赖：
 
 ```bash
-git clone <PUBLIC_REPOSITORY_URL> h3loom
+git clone https://github.com/erduo1998-cell/h3loom.git h3loom
 cd h3loom
 uv sync --frozen
 source .venv/bin/activate
@@ -98,7 +98,7 @@ broll-autodl plan-batch <task-id>
 - `outputs/generated/<task-id>/` 保存原始下载，`outputs/final/<task-id>/` 保存当前候选；默认 `human_review_pending`，用户审片接受后才运行 `broll-video accept <task-id>`。
 - `deploy/` 保存小型重建材料；`broll_video/`、`schemas/`、`tests_broll/` 保存执行逻辑、数据结构与测试。
 - `work/`、`outputs/`、`secrets/` 均被 Git 忽略。升级时保留这些私人目录；不要把整个生产目录复制进发行仓库。
-- [迁移记录](migration-scope.md) 说明哪些内容迁入、哪些历史或私人内容保留在原项目；[第三方来源与许可状态](../THIRD_PARTY_NOTICES.md) 说明公开前尚需确认的许可。
+- [迁移记录](migration-scope.md) 说明哪些内容迁入、哪些历史或私人内容保留在原项目；[第三方来源与许可状态](../THIRD_PARTY_NOTICES.md) 说明代码许可与独立适用的第三方条款。
 
 本机离线逻辑测试（不调用图片生成、云端或付费视频）：
 

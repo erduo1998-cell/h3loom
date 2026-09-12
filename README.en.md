@@ -9,7 +9,8 @@
 [![Python](docs/images/badges/python.svg)](pyproject.toml)
 [![Agent Skills](docs/images/badges/skills.svg)](.agents/skills/srt-broll-producer/SKILL.md)
 [![Runtime](docs/images/badges/runtime.svg)](docs/autodl-production.md)
-[![Status](docs/images/badges/status.svg)](THIRD_PARTY_NOTICES.md)
+[![Status](docs/images/badges/status.svg)](https://github.com/erduo1998-cell/h3loom/releases/tag/v0.2.0rc1)
+[![License: Apache-2.0](docs/images/badges/license.svg)](LICENSE)
 
 **Your own cloud deployment · Ongoing generation experiments · A personal visual style**
 
@@ -19,7 +20,7 @@ Deploy your own cloud instance of MiniMax H3. Through repeated experiments, prod
 
 **For creators who want to make AI videos over the long term and are willing to refine their style through practice.** The current workflow turns narration SRT files into standalone 4K B-roll clips, with an Agent handling shot design, storyboards, and cloud execution.
 
-> H3Loom is an independent MiniMax H3 cloud creation toolkit (H3 + loom). This is a local release candidate, not a public release. The owner has not yet selected a license for original content. Model terms include territorial and commercial conditions; see [third-party notices](THIRD_PARTY_NOTICES.md).
+> H3Loom is an independent MiniMax H3 cloud creation toolkit (H3 + loom). The first public release is **v0.2.0rc1**. Original code and the three Skills use [Apache-2.0](LICENSE). Model terms have separate territorial and commercial conditions; see [third-party notices](THIRD_PARTY_NOTICES.md). Fresh GPU installation and end-to-end generation still need hardware validation; see [release validation](docs/release-readiness.md).
 
 
 ### 24-second introduction · made with code
@@ -89,8 +90,7 @@ Total spending also depends on charges for image generation, Agent subscriptions
 Once you have repository access, clone and install it locally:
 
 ```bash
-# PUBLIC_REPOSITORY_URL: use the final repository URL after publication.
-git clone <PUBLIC_REPOSITORY_URL> h3loom
+git clone https://github.com/erduo1998-cell/h3loom.git h3loom
 cd h3loom
 uv sync --frozen
 source .venv/bin/activate
@@ -125,4 +125,4 @@ Replace `<task-id>` with the task ID returned by the previous command. Before pr
 
 [Installation and operations guide](docs/getting-started.md) · [Production workflow](docs/three-stage-workflow.md) · [Migration scope](docs/migration-scope.md) · [Existing validation](docs/migration-validation.md) · [Third-party sources and license status](THIRD_PARTY_NOTICES.md)
 
-The project has not been publicly released, and a distribution license for its original content has not yet been chosen. Actual videos still require human review of visuals, text, and audio. See the [README asset record](docs/readme-assets.md) for the sources and display purposes of the introduction images and personal WeChat QR code.
+Actual videos still require human review of visuals, text, and audio. See the [README asset record](docs/readme-assets.md) for the sources and display purposes of the introduction images and personal WeChat QR code.

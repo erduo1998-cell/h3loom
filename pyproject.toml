@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,10 +8,17 @@ version = "0.2.0rc1"
 description = "H3Loom: SRT to storyboard to MiniMax H3 cloud B-roll"
 readme = "README.en.md"
 requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "erduo1998-cell"}]
 dependencies = [
   "jsonschema>=4.20",
   "Pillow>=10.0",
 ]
+
+[project.urls]
+Repository = "https://github.com/erduo1998-cell/h3loom"
+Issues = "https://github.com/erduo1998-cell/h3loom/issues"
 
 [project.scripts]
 broll-video = "broll_video.cli:main"

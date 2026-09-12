@@ -25,9 +25,9 @@
 
 ### 24초 프로젝트 소개 · 코드로 제작
 
-[![24초 프로젝트 소개 · 코드로 제작](docs/media/h3loom-intro-poster.png)](https://erduo1998-cell.github.io/h3loom/)
+![24초 프로젝트 소개 · 코드로 제작](docs/media/h3loom-intro.webp)
 
-[MP4 재생](https://erduo1998-cell.github.io/h3loom/) · [소스 및 빌드 방법](media/intro/README.md)
+무음 자동 반복 재생 · [소리가 있는 MP4 보기](https://erduo1998-cell.github.io/h3loom/) · [소스 및 빌드 방법](media/intro/README.md)
 
 로컬 3D 렌더링, 애니메이션, 합성 음향으로 제작했습니다. 은색 모듈은 런타임의 개념 표현이며 실제 하드웨어나 H3 생성 샘플이 아닙니다.
 

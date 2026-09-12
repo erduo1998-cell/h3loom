@@ -54,3 +54,12 @@ not claim frame-exact equivalence to the original commercial.
 
 The earlier 36-second Canvas-only film was rejected and removed from the build
 entry points. Its local working files remain outside the release snapshot.
+
+## README autoplay preview
+
+From the repository root, run `uv run --frozen python media/intro/readme-animation.py`
+to create the full-length, silent WebP loop embedded directly in the five READMEs.
+It preserves 24 seconds and 24 fps at 800 × 450, with millisecond frame durations
+that sum to exactly 24,000 ms. It is encoded locally using FFmpeg and Pillow;
+no new scene rendering or external service is involved. The separate MP4 link
+provides sound and the full 1080p version.

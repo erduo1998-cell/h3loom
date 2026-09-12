@@ -25,9 +25,9 @@ Deploy your own cloud instance of MiniMax H3. Through repeated experiments, prod
 
 ### 24-second introduction · made with code
 
-[![24-second introduction · made with code](docs/media/h3loom-intro-poster.png)](https://erduo1998-cell.github.io/h3loom/)
+![24-second introduction · made with code](docs/media/h3loom-intro.webp)
 
-[Play MP4](https://erduo1998-cell.github.io/h3loom/) · [Source and build instructions](media/intro/README.md)
+Autoplays in a silent loop · [Watch MP4 with sound](https://erduo1998-cell.github.io/h3loom/) · [Source and build instructions](media/intro/README.md)
 
 Locally rendered geometry, animation and synthesized sound. The silver module is a metaphor for the runtime, not physical hardware or an H3 generation sample.
 

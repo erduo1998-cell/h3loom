@@ -40,6 +40,16 @@
       "path": "media/intro/package-lock.json",
       "bytes": 8378,
       "sha256": "beab23d8ebe9019a60efe8f780094fca7a336fa066cf93b36d540890c1721a87"
+    },
+    {
+      "path": "docs/media/h3loom-intro.webp",
+      "bytes": 4522904,
+      "sha256": "ac2f58a9805a4a56d5c1169e8c3838c92d3f38d6fea5e9d5135e00197a545c68"
+    },
+    {
+      "path": "media/intro/readme-animation.py",
+      "bytes": 1989,
+      "sha256": "be09a9c0204d0098520ea31e25be0754bdbc39df94a2b768321c90a03128f41f"
     }
   ],
   "encoding": {
@@ -60,5 +70,20 @@
     "decoded_video_frames": 720,
     "complete_decode": "passed",
     "note": "VMAF is a compression comparison, not a claim of losslessness or creative quality."
+  },
+  "readme_preview": {
+    "format": "animated WebP",
+    "dimensions": [
+      800,
+      450
+    ],
+    "fps": 24,
+    "duration_ms": 24000,
+    "loop": 0,
+    "audio": false,
+    "quality": 76,
+    "source": "docs/media/h3loom-intro.mp4",
+    "encoder": "Pillow / libwebp, method 4",
+    "input_frames": 576
   }
 }

@@ -25,9 +25,9 @@
 
 ### 24 秒项目介绍 · 纯代码制作
 
-[![24 秒项目介绍 · 纯代码制作](docs/media/h3loom-intro-poster.png)](https://erduo1998-cell.github.io/h3loom/)
+![24 秒项目介绍 · 纯代码制作](docs/media/h3loom-intro.webp)
 
-[播放 MP4](https://erduo1998-cell.github.io/h3loom/) · [查看制作源码](media/intro/README.md)
+自动循环播放 · 无声；[观看有声版 MP4](https://erduo1998-cell.github.io/h3loom/) · [查看制作源码](media/intro/README.md)
 
 视频由本地三维代码、动画和合成音效制作；银色模块是云端运行时的概念表达，不是实体硬件或 H3 实际生成样例。
 

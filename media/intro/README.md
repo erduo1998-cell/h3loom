@@ -4,7 +4,9 @@ A 24-second, 1920 × 1080, 30 fps product introduction, built from local code.
 `film.py` creates the geometry, materials, moving lights, camera choreography,
 type layouts, storyboard views and progressive surface reveal in Blender.
 `finish.cjs` adds original synthesized audio and readable project captions with
-Canvas, then encodes H.264/AAC with FFmpeg.
+Canvas, then encodes H.264/AAC with FFmpeg (slow preset, CRF 24, AAC 128 kbit/s,
+fast-start MP4). The web copy keeps all 720 frames at 1080p/30 fps and is encoded
+directly from the rendered PNGs, avoiding another lossy video transcode.
 
 No cloud model, AI-generated image/video, stock footage, Apple footage/music,
 Remotion or HyperFrames is used. The separate README workflow illustration is

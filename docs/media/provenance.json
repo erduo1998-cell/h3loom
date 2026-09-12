@@ -13,8 +13,8 @@
   "files": [
     {
       "path": "docs/media/h3loom-intro.mp4",
-      "bytes": 8147039,
-      "sha256": "cab94977f3193a0ebae47c4e44c931a1acdc4c01f4ba339ec853f2368baa7836"
+      "bytes": 3547400,
+      "sha256": "3971facf7868727e95284d2797ba32f1be8d727cae73055fcd626f91e3fa23f1"
     },
     {
       "path": "docs/media/h3loom-intro-poster.png",
@@ -28,8 +28,8 @@
     },
     {
       "path": "media/intro/finish.cjs",
-      "bytes": 5002,
-      "sha256": "bf29586dfabba7f0c6b2c86b8dbba1640770f0e5e1119153e5c7f7ece1cf3882"
+      "bytes": 5000,
+      "sha256": "939beded414a58bef69fa5bd56cf8ba6412204f6ae6702cda07ce9d74b2434bd"
     },
     {
       "path": "media/intro/render-film.cjs",
@@ -41,5 +41,24 @@
       "bytes": 8378,
       "sha256": "beab23d8ebe9019a60efe8f780094fca7a336fa066cf93b36d540890c1721a87"
     }
-  ]
+  ],
+  "encoding": {
+    "video": "H.264 / libx264",
+    "preset": "slow",
+    "crf": 24,
+    "audio_bitrate": "128k",
+    "fast_start": true,
+    "source": "Original rendered PNG frames + original Canvas overlays + synthesized PCM audio; not a transcode of the prior MP4"
+  },
+  "compression_review": {
+    "previous_bytes": 8147039,
+    "current_bytes": 3547400,
+    "reduction_percent": 56.5,
+    "reference_sha256": "cab94977f3193a0ebae47c4e44c931a1acdc4c01f4ba339ec853f2368baa7836",
+    "vmaf_mean_vs_previous": 96.85758,
+    "vmaf_min_vs_previous": 92.844613,
+    "decoded_video_frames": 720,
+    "complete_decode": "passed",
+    "note": "VMAF is a compression comparison, not a claim of losslessness or creative quality."
+  }
 }

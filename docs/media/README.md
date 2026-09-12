@@ -1,7 +1,7 @@
 # Project introduction media
 
 - [Watch in the browser](https://erduo1998-cell.github.io/h3loom/).
-- [h3loom-intro.mp4](h3loom-intro.mp4): 24 seconds, 1920 × 1080, 30 fps, H.264/AAC.
+- [h3loom-intro.mp4](h3loom-intro.mp4): 24 seconds, 1920 × 1080, 30 fps, H.264/AAC, 3.55 MB (3,547,400 bytes).
 - [h3loom-intro-poster.png](h3loom-intro-poster.png): frame from the encoded composition at 21.5 seconds.
 - [Source and reproduction instructions](../../media/intro/README.md).
 - [Media identity record](provenance.json).
@@ -15,3 +15,8 @@ The silver module represents the runtime conceptually; it is not a physical
 H3Loom device or an H3 output sample. The project owner approved publication on 2026-09-12.
 GitHub file previews do not play this MP4; the README links to the static
 GitHub Pages player, serving the same committed video.
+
+The web/release attachment was compressed on 2026-09-12 from the original
+rendered frames, reducing the MP4 by 56.5% while retaining resolution, frame
+count, timing, and audio. Encoding settings and comparison are in the media
+identity record. The original release tag is unchanged.

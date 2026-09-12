@@ -50,7 +50,7 @@ async function main(){
  for(let i=0;i<count;i++)if(!fs.existsSync(path.join(OUT,`frame-${String(i).padStart(5,'0')}.png`)))throw Error(`Frame ${i} missing; refusing partial final export.`);
  const c=createCanvas(W,H),ctx=c.getContext('2d');
  const dest=path.join(OUT,count===720?'h3loom-intro-v2.mp4':'motion-preview.mp4');
- const enc=spawn('ffmpeg',['-hide_banner','-loglevel','error','-y','-f','rawvideo','-pixel_format','rgba','-video_size',`${W}x${H}`,'-framerate',String(FPS),'-i','-','-i',audio(),'-c:v','libx264','-preset','medium','-crf','17','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-shortest','-movflags','+faststart',dest],{stdio:['pipe','inherit','inherit']});
+ const enc=spawn('ffmpeg',['-hide_banner','-loglevel','error','-y','-f','rawvideo','-pixel_format','rgba','-video_size',`${W}x${H}`,'-framerate',String(FPS),'-i','-','-i',audio(),'-c:v','libx264','-preset','slow','-crf','24','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-shortest','-movflags','+faststart',dest],{stdio:['pipe','inherit','inherit']});
  let failure;enc.on('error',e=>failure=e);enc.stdin.on('error',e=>failure=e);
  for(let i=0;i<count;i++){
   if(failure)throw failure;

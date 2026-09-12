@@ -25,7 +25,7 @@
 
 ### 24초 프로젝트 소개 · 코드로 제작
 
-![24초 프로젝트 소개 · 코드로 제작](docs/media/h3loom-intro.webp?v=d439220efed5)
+![24초 프로젝트 소개 · 코드로 제작](docs/media/h3loom-intro.webp?v=d6e8f4b608ba)
 
 무음 자동 반복 재생 · [소리가 있는 MP4 보기](https://erduo1998-cell.github.io/h3loom/) · [소스 및 빌드 방법](media/intro-three/README.md)
 

@@ -25,7 +25,7 @@ Deploy your own cloud instance of MiniMax H3. Through repeated experiments, prod
 
 ### 24-second introduction · made with code
 
-![24-second introduction · made with code](docs/media/h3loom-intro.webp?v=d439220efed5)
+![24-second introduction · made with code](docs/media/h3loom-intro.webp?v=d6e8f4b608ba)
 
 Autoplays in a silent loop · [Watch MP4 with sound](https://erduo1998-cell.github.io/h3loom/) · [Source and build instructions](media/intro-three/README.md)
 

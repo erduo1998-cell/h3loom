@@ -18,8 +18,8 @@ const rim=new THREE.DirectionalLight(0x859aff,2);rim.position.set(5,-1,6);scene.
 const fill=new THREE.DirectionalLight(0xffe2d0,1.1);fill.position.set(-5,-3,5);scene.add(fill);
 const groups={},words={};
 function section(id){const g=new THREE.Group();scene.add(g);groups[id]=g;return g}
-function word(parent,text,width,height,x=0,y=0,mat='white'){
- const root=new THREE.Group();const type=kit.makeWord(text,{width,height,material:mat,depth:.045});root.add(type);root.position.set(x,y,0);parent.add(root);return root;
+function word(parent,text,width,height,x=0,y=0,mat='silver'){
+ const root=new THREE.Group();const type=kit.makeWord(text,{width,height,material:mat,depth:.16});root.add(type);root.position.set(x,y,0);parent.add(root);return root;
 }
 function label(parent,text,width,x,y,color='#b9bac0'){
  const canvas=document.createElement('canvas');canvas.width=1600;canvas.height=140;const ctx=canvas.getContext('2d');ctx.font='500 52px Arial, sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle=color;ctx.fillText(text,800,72);
@@ -40,7 +40,7 @@ let g=section('from');words.from=word(g,'FROM',13.6,5.9);
 g=section('srt');words.srt=word(g,'SRT',13.55,6.6);
 g=section('to');words.to=word(g,'TO',9.4,6.5);
 g=section('story');words.story=word(g,'STORY',14.2,6.4);
-g=section('with');words.with=word(g,'WITH',14.4,8.1,0,0,'satin');
+g=section('with');words.with=word(g,'WITH',14.4,8.1,0,0,'silver');
 g=section('device');const device=new THREE.Group();g.add(device);
 box(device,8.7,4.7,3.5,alloy,0,0,0,.35);box(device,8.1,4.15,.10,alloy,0,0,1.77,.17);
 const vents=new THREE.InstancedMesh(new THREE.CircleGeometry(.041,8),new THREE.MeshBasicMaterial({color:0x050507}),420);

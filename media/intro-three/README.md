@@ -21,7 +21,7 @@ npm run build
 npm run verify
 ```
 
-The latest output is `outputs/intro-three/h3loom-type-connected.mp4` relative to the repository root. The build renders 1,440 deterministic frames at 1920×1080 / 60 fps, synthesizes an original 48 kHz stereo score, and muxes H.264/AAC with fast-start metadata. Output files are ignored by Git. `node build.mjs --mux-only` rebuilds the soundtrack and muxes an already rendered silent picture.
+The latest output is `outputs/intro-three/h3loom-type-metal.mp4` relative to the repository root. The build renders 1,440 deterministic frames at 1920×1080 / 60 fps, synthesizes an original 48 kHz stereo score, and muxes H.264/AAC with fast-start metadata. Output files are ignored by Git. `node build.mjs --mux-only` rebuilds the soundtrack and muxes an already rendered silent picture.
 
 For shorter iterations:
 
@@ -53,8 +53,14 @@ The first study treated too many shots as independent resettable scenes. `compos
 
 `transition-reference.md` records the observed reference evidence. The local player can compare the previous 3.7 MB study at the same playhead position if that earlier build is present. Latest encoded output is 24 seconds, 1080p60, 5,301,316 bytes. Full audio/video decoding passed. The new shared-actor scene passed 80 seek-return comparisons at 16 transition-focused timestamps; this verifies deterministic state, not aesthetic equivalence to the source. Receipts: `outputs/intro-three/connected-seek.json` and `h3loom-type-connected-silent.mp4.json`.
 
-## Homepage publication and retrospective
+## Connected version publication and retrospective
 
-The connected-transitions version is distributed as `docs/media/h3loom-intro.mp4`; all five READMEs embed its complete silent animated WebP preview. The [public player](https://erduo1998-cell.github.io/h3loom/) provides the 1080p60 version with sound. The reusable analysis and correction process is recorded in [the Chinese retrospective](RETROSPECTIVE.zh-CN.md).
+The connected-transitions version was the first Three.js homepage film. It has since received the metallic face correction below; all five READMEs embed the current complete silent animated WebP preview. The [public player](https://erduo1998-cell.github.io/h3loom/) provides the 1080p60 version with sound. The reusable analysis and correction process is recorded in [the Chinese retrospective](RETROSPECTIVE.zh-CN.md).
 
-The MP4 SHA-256 is `55a6ec07521aae1b5e291842f9a147f5652e43a88fa50925331f6273db1a5125`. Preview generation reuses `media/intro/readme-animation.py` from the repository root: `uv run --with pillow python media/intro/readme-animation.py`. It samples the complete movie at 800×450 / 24 fps; the WebP encoder merges identical held frames while preserving the 24-second loop.
+The earlier connected MP4 SHA-256 is `55a6ec07521aae1b5e291842f9a147f5652e43a88fa50925331f6273db1a5125`. Preview generation reuses `media/intro/readme-animation.py` from the repository root: `uv run --with pillow python media/intro/readme-animation.py`. It samples the complete movie at 800×450 / 24 fps; the WebP encoder merges identical held frames while preserving the 24-second loop.
+
+## Metallic face correction (2026-09-12)
+
+The subsequent material review found that most title faces were unlit white, with metallic material only on thin side walls. The current homepage version uses silver physical material on the complete title, more visible bevels and 0.16-unit extrusion. Finite virtual studio cards produce readable highlight/negative-fill bands; RENDER and 4K retain restrained blue/violet accents. This is a designed reflection approximation, not offline path tracing.
+
+The shot timings, camera/layout tracks and soundtrack are unchanged from the approved connected version. The prior connected MP4 is retained locally for same-time comparison. The material revision passed 33 pixel-identical seek returns across 11 timestamps, full audio/video decode and complete browser playback. These checks establish playback/state integrity; they do not claim a fresh owner aesthetic approval. Current distributed asset hashes are in `docs/media/provenance.json`.

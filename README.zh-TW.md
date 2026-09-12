@@ -25,7 +25,7 @@
 
 ### 24 秒專案介紹 · 純程式碼製作
 
-![24 秒專案介紹 · 純程式碼製作](docs/media/h3loom-intro.webp?v=d439220efed5)
+![24 秒專案介紹 · 純程式碼製作](docs/media/h3loom-intro.webp?v=d6e8f4b608ba)
 
 自動循環播放 · 無聲；[觀看有聲版 MP4](https://erduo1998-cell.github.io/h3loom/) · [查看製作原始碼](media/intro-three/README.md)
 

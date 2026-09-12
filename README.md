@@ -25,7 +25,7 @@
 
 ### 24 秒项目介绍 · 纯代码制作
 
-![24 秒项目介绍 · 纯代码制作](docs/media/h3loom-intro.webp?v=d439220efed5)
+![24 秒项目介绍 · 纯代码制作](docs/media/h3loom-intro.webp?v=d6e8f4b608ba)
 
 自动循环播放 · 无声；[观看有声版 MP4](https://erduo1998-cell.github.io/h3loom/) · [查看制作源码](media/intro-three/README.md)
 

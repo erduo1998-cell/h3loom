@@ -25,7 +25,7 @@
 
 ### 24 秒の紹介動画 · コードで制作
 
-![24 秒の紹介動画 · コードで制作](docs/media/h3loom-intro.webp?v=d439220efed5)
+![24 秒の紹介動画 · コードで制作](docs/media/h3loom-intro.webp?v=d6e8f4b608ba)
 
 無音で自動ループ再生 · [音声付き MP4 を見る](https://erduo1998-cell.github.io/h3loom/) · [ソースとビルド方法](media/intro-three/README.md)
 

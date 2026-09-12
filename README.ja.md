@@ -25,9 +25,9 @@
 
 ### 24 秒の紹介動画 · コードで制作
 
-[![24 秒の紹介動画 · コードで制作](docs/media/h3loom-intro-poster.png)](docs/media/h3loom-intro.mp4)
+[![24 秒の紹介動画 · コードで制作](docs/media/h3loom-intro-poster.png)](https://erduo1998-cell.github.io/h3loom/)
 
-[MP4 を再生](docs/media/h3loom-intro.mp4) · [ソースとビルド方法](media/intro/README.md)
+[MP4 を再生](https://erduo1998-cell.github.io/h3loom/) · [ソースとビルド方法](media/intro/README.md)
 
 ローカルの三次元描画、アニメーション、合成音で制作しています。銀色のモジュールは実行環境の概念表現であり、実物のハードウェアや H3 の生成サンプルではありません。
 

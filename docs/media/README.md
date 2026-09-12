@@ -1,5 +1,6 @@
 # Project introduction media
 
+- [Watch in the browser](https://erduo1998-cell.github.io/h3loom/).
 - [h3loom-intro.mp4](h3loom-intro.mp4): 24 seconds, 1920 × 1080, 30 fps, H.264/AAC.
 - [h3loom-intro-poster.png](h3loom-intro-poster.png): frame from the encoded composition at 21.5 seconds.
 - [Source and reproduction instructions](../../media/intro/README.md).
@@ -11,5 +12,6 @@ part of the film build. The unrelated README workflow diagram is excluded.
 No Apple footage, music, trademark graphic or model asset is included.
 
 The silver module represents the runtime conceptually; it is not a physical
-H3Loom device or an H3 output sample. Visual approval for publication remains
-with the project owner.
+H3Loom device or an H3 output sample. The project owner approved publication on 2026-09-12.
+GitHub file previews do not play this MP4; the README links to the static
+GitHub Pages player, serving the same committed video.
